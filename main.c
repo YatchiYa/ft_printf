@@ -42,7 +42,7 @@ int main()
 
 	ft_printf("13 - |%0*.d|\n", 10, 50);
 	printf("13 - |%0*.d|\n\n", 10, 50);
-
+*/
 
 	printf("\n\n----------STRINGS----------\n\n");
 
@@ -106,19 +106,20 @@ int main()
 	ft_printf("%.*s|\n", 10, s2);
 	printf("%.*s|\n\n", 10, s2);
 
-	printf("\n\n----------CHARS----------\n\n");
+//	printf("\n\n----------CHARS----------\n\n");
 
-	ft_printf("%*c|\n", 50, c);
-	printf("%*c|\n\n", 50, c);
+	
+	//ft_printf("%*c|\n", 50, c);
+	//printf("%*c|\n\n", 50, c);
 
-	ft_printf("%-10c|\n", c);
-	printf("%-10c|\n\n", c);
+	//ft_printf("%-10c|\n", c);
+	//printf("%-10c|\n\n", c);
 
-	ft_printf("%*.c|\n", 50, c);
-	printf("%*.c|\n\n", 50, c);
+	//ft_printf("%*.c|\n", 50, c);
+	//printf("%*.c|\n\n", 50, c);
 
-*/
-	printf("\n\n----------HEXA UNSIGNED INT----------\n\n");
+
+//	printf("\n\n----------HEXA UNSIGNED INT----------\n\n");
 	
 	//ft_printf("%x , %x, |%X|, |%X|\n", 31, -31, 31, -31);
 	//printf("%x , %x, %X, %X\n\n\n", 31, -31, 31, -31);
@@ -132,14 +133,14 @@ int main()
 //	ft_printf("3 - |%-10x| Hi \n", 5842);
 //	printf("3 - |%-10x| Hi \n\n", 5842);
 
-	ft_printf("4 - |%*X|\n", 10, 5842);
-	printf("4 - |%*X|\n\n", 10, 5842);
+//	ft_printf("4 - |%*X|\n", 10, 5842);
+//	printf("4 - |%*X|\n\n", 10, 5842);
 
 //	ft_printf("5 - |%-.10x| Hi \n", 5842);
 //	printf("5 - |%-.10x| Hi\n\n", 5842);
 
-	ft_printf("6 - |%0.x|\n", 5842);
-	printf("6 - |%0.x|\n\n", 5842);
+//	ft_printf("6 - |%0.x|\n", 5842);
+//	printf("6 - |%0.x|\n\n", 5842);
 
 //	ft_printf("7 - |%.*x|\n", 10, 5842);
 //	printf("7 - |%.*x|\n\n", 10, 5842);
