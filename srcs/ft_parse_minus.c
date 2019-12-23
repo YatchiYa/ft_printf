@@ -5,7 +5,7 @@ void	ft_minus_parsing(char *str, va_list args, int *p, int *size, t_flags flags)
 	if (str[0] == 'd' || str[0] == 'i')
 		ft_minus_parse_id(str, args, p, size, flags);
 	if (str[0] == 'u')
-		ft_minus_parsing_u(str, args, p, size, flags);
+		ft_minus_parse_u(str, args, p, size, flags);
 
 	clear_struct(&flags);
 }

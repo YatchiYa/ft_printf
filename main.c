@@ -4,7 +4,7 @@ int main()
 {
 	char s2[] = "salut ca va bien";
 	char c = 'a';
-
+/*
 	printf("\n\n----------NUMBERS----------\n\n");
 
 	printf("1 - |%d|\n", 50);
@@ -42,7 +42,7 @@ int main()
 
 	ft_printf("13 - |%0*.d|\n", 10, 50);
 	printf("13 - |%0*.d|\n\n", 10, 50);
-/*
+
 
 	printf("\n\n----------STRINGS----------\n\n");
 
@@ -142,21 +142,21 @@ int main()
 
 	ft_printf("%X\n", 9999999);
 	printf("%X\n\n", 9999999);
-
+*/
 	printf("\n\n----------UNSIGNED INT----------\n\n");
 
-	ft_printf("%-.10u\n", 2000546511);
-	printf("%-.10u\n\n", 2000546511);
+	ft_printf("1 - %-.10u\n", 2000546511);
+	printf("1 - %-.10u\n\n", 2000546511);
 
-	ft_printf("%0.10u\n", 2000546511);
-	printf("%0.10u\n\n", 2000546511);
+	ft_printf("2 - %0.10u\n", 2000546511);
+	printf("2 - %0.10u\n\n", 2000546511);
 
-	ft_printf("%.030u\n", 2000546511);
-	printf("%.030u\n\n", 2000546511);
+	ft_printf("3 - %.030u\n", 2000546511);
+	printf("3 - %.030u\n\n", 2000546511);
 
-	ft_printf("%-*u\n", 30, 2000546511);
-	printf("%-*u\n\n", 30, 2000546511);
+	ft_printf("4 - %-*u\n", 30, 2000546511);
+	printf("4 - %-*u\n\n", 30, 2000546511);
 
-*/
+
 	return (0);
 }

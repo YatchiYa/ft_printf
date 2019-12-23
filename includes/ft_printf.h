@@ -20,6 +20,12 @@
 # define PARSE_LETTERS "diucspxX%"
 # define PARSE_FLAGS "-O.*"
 
+typedef struct	s_flags
+{
+	int	width;
+	int	precision;
+	int	blanks;
+}		t_flags;
 
 void		ft_parse_int(va_list args, int *i);
 int				ft_parse_int_g(va_list args);
@@ -47,12 +53,6 @@ int				ft_str_length_format(char c, va_list args);
 int				ft_is_flags(char c);
 int				ft_is_type(char c);
 
-typedef struct	s_flags
-{
-	int	width;
-	int	precision;
-	int	blanks;
-}		t_flags;
 
 void		ft_print_elem(int w, int p, char c, int *size);
 void		ft_zero_parsing(char *str, va_list args, int *p, int *size, t_flags flags);

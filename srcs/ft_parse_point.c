@@ -1,11 +1,5 @@
 #include "../includes/ft_printf.h"
 
-void	ft_point_parsing(char *str, va_list args, int *p, int *size, t_flags flags)
-{
-	if (str[0] == 'i' || str[0] == 'd')
-		ft_point_parsing_id(str, args, p, size, flags);
-}
-
 void	ft_parse_point(char *str, va_list args, int *p ,int *size)
 {
 	int		k;
