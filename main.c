@@ -117,8 +117,12 @@ int main()
 	ft_printf("%*.c|\n", 50, c);
 	printf("%*.c|\n\n", 50, c);
 
+*/
 	printf("\n\n----------HEXA UNSIGNED INT----------\n\n");
-
+	
+	ft_printf("%x , %x, |%X|, |%X|\n", 31, -31, 31, -31);
+	printf("%x , %x, %X, %X\n\n\n", 31, -31, 31, -31);
+	
 	ft_printf("%x\n", 42);
 	printf("%x\n\n", 42);
 
@@ -142,7 +146,9 @@ int main()
 
 	ft_printf("%X\n", 9999999);
 	printf("%X\n\n", 9999999);
-*/
+
+
+	/*
 	printf("\n\n----------UNSIGNED INT----------\n\n");
 
 	ft_printf("1 - %-.10u\n", 2000546511);
@@ -156,7 +162,7 @@ int main()
 
 	ft_printf("4 - %-*u\n", 30, 2000546511);
 	printf("4 - %-*u\n\n", 30, 2000546511);
-
+*/
 
 	return (0);
 }

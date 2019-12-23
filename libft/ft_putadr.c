@@ -1,5 +1,27 @@
 #include "../includes/ft_printf.h"
 
+void	ft_putadr_maj(unsigned long n, int *p)
+{
+	if (n > 15)
+	{
+		ft_putadr_maj((n / 16), p);
+		ft_putadr_maj((n % 16), p);
+	}
+	else if (n < 10)
+	{
+		ft_putchar(n + '0', p);
+	}
+	else 
+	{
+		n == 10 ? ft_putchar('A', p) : 0;
+		n == 11 ? ft_putchar('B', p) : 0;
+		n == 12 ? ft_putchar('C', p) : 0;
+		n == 13 ? ft_putchar('D', p) : 0;
+		n == 14 ? ft_putchar('E', p) : 0;
+		n == 15 ? ft_putchar('F', p) : 0;
+	}
+}
+
 void	ft_putadr(unsigned long n, int *p)
 {
 	if (n > 15)

@@ -1,21 +1,5 @@
 #include "../includes/ft_printf.h"
 
-void	ft_parse_hexa(va_list args, int *p)
-{
-	unsigned int	number;
-
-	number = va_arg(args, unsigned int);
-	ft_putnbr_base(number, HEXA_BASE, p);
-}
-
-void	ft_parse_hexa_m(va_list args, int *p)
-{
-	unsigned int	number;
-
-	number = va_arg(args, unsigned int);
-	ft_putnbr_base(number, HEXA_BASE_M, p);
-}
-
 void	ft_parse_ptr(va_list args, int *p)
 {
 	void		*adr;
