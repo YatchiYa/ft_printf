@@ -37,27 +37,7 @@ void	ft_digits_parsing_s(char *strx, va_list args, int *p, int *size, t_flags fl
 		ft_putstr(s, size);
 	}
 }
-/*
-void	ft_digits_parsing_u(char *str, va_list args, int *p, int *size, t_flags flags)
-{
-	int		n;
-	
-	*p = *p - 1;
-	n = ft_str_length_format(str[0], args);
-	if (str[0] == 'p')
-		printf(" -DEBUG- %d -", n);
-	if (flags.blanks == 1 && flags.precision != -1)
-	{
-		ft_print_elem(flags.width,
-				flags.precision > n ? flags.precision : n,
-				' ', size);
-		ft_print_elem(flags.precision, n, '0', size);
-	}
-	else
-		ft_print_elem(flags.width, n, ' ', size);
-	ft_parse_format(str, args, p, size);
-}
-*/
+
 void	ft_digits_parsing(char *str, va_list args, int *p, int *size, t_flags flags)
 {
 	char	t[550];
@@ -72,6 +52,10 @@ void	ft_digits_parsing(char *str, va_list args, int *p, int *size, t_flags flags
 		ft_digits_parsing_u(str, args, p, size, flags);
 	else if (str[0] == 'd' || str[0] == 'i')
 		ft_digits_parsing_id(str, args, p, size, flags);
+	else if (str[0] == 'x')
+		ft_digits_parsing_hexa(str, args, p, size, flags);
+	else if (str[0] == 'X')
+		ft_digits_parsing_hexa_m(str, args, p, size, flags);
 	clear_struct(&flags);
 }
 

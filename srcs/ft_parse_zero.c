@@ -6,6 +6,10 @@ void	ft_zero_parsing(char *str, va_list args, int *p, int *size, t_flags flags)
 		ft_zero_parsing_id(str, args, p, size, flags);
 	if (str[0] == 'u')
 		ft_zero_parsing_u(str, args, p, size, flags);
+	if (str[0] == 'x')
+		ft_zero_parsing_hexa(str, args, p, size, flags);
+	if (str[0] == 'X')
+		ft_zero_parsing_hexa_m(str, args, p, size, flags);
 }
 
 

@@ -8,7 +8,7 @@ void	ft_parse_hexa_m(va_list args, int *p)
 	ft_putadr_maj(number, p);
 }
 
-void	ft_digits_parsing_hexa(char *str, va_list args, int *p, int *size, t_flags flags)
+void	ft_digits_parsing_hexa_m(char *str, va_list args, int *p, int *size, t_flags flags)
 {
 	unsigned long	number;
 	int	n;
@@ -26,7 +26,7 @@ void	ft_digits_parsing_hexa(char *str, va_list args, int *p, int *size, t_flags 
 	ft_putadr_maj(number, p);
 }
 
-void	ft_minus_parse_hexa(char *str, va_list args, int *p, int *size, t_flags flags)
+void	ft_minus_parse_hexa_m(char *str, va_list args, int *p, int *size, t_flags flags)
 {
 	unsigned long	number;
 	int	n;
@@ -47,7 +47,7 @@ void	ft_minus_parse_hexa(char *str, va_list args, int *p, int *size, t_flags fla
 	}
 }
 
-void	ft_zero_parsing_id(char *str, va_list args, int *p, int *size, t_flags flags)
+void	ft_zero_parsing_hexa_m(char *str, va_list args, int *p, int *size, t_flags flags)
 {
 	unsigned long	number;
 	int	n;

@@ -22,5 +22,6 @@ void	free_tab(char *tab);
 void	ft_putadr(unsigned long n, int *p);
 void	ft_putadr_maj(unsigned long n, int *p);
 int		ft_putadr_len(va_list args);
+int	ft_hexalen(va_list args);
 
 #endif

@@ -6,6 +6,10 @@ void	ft_minus_parsing(char *str, va_list args, int *p, int *size, t_flags flags)
 		ft_minus_parse_id(str, args, p, size, flags);
 	if (str[0] == 'u')
 		ft_minus_parse_u(str, args, p, size, flags);
+	if (str[0] == 'x')
+		ft_minus_parse_hexa(str, args, p, size, flags);
+	if (str[0] == 'X')
+		ft_minus_parse_hexa_m(str, args, p, size, flags);
 
 	clear_struct(&flags);
 }

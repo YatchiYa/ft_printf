@@ -47,7 +47,7 @@ void	ft_minus_parse_hexa(char *str, va_list args, int *p, int *size, t_flags fla
 	}
 }
 
-void	ft_zero_parsing_id(char *str, va_list args, int *p, int *size, t_flags flags)
+void	ft_zero_parsing_hexa(char *str, va_list args, int *p, int *size, t_flags flags)
 {
 	unsigned long	number;
 	int	n;
