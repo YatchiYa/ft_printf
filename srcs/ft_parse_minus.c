@@ -1,19 +1,5 @@
 #include "../includes/ft_printf.h"
 
-void	ft_minus_parse_c(char *str, va_list args, int *p, int *size, t_flags flags)
-{
-	char	c;
-
-	c = (char)(va_arg(args, int));
-	if (flags.width != -1)
-	{
-		ft_putchar(c, size);
-		ft_print_elem(flags.width, 1, ' ', size);
-	}
-	else
-		ft_putchar(c, size);
-}
-
 void	ft_minus_parsing(char *str, va_list args, int *p, int *size, t_flags flags)
 {
 	if (str[0] == 'd' || str[0] == 'i')

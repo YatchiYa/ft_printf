@@ -1,19 +1,5 @@
 #include "../includes/ft_printf.h"
 
-void	ft_digits_parsing_c(char *strx, va_list args, int *p, int *size, t_flags flags)
-{
-	char	c;
-
-	c = (char)va_arg(args, int);
-	if (flags.width != -1)
-	{
-		ft_print_elem(flags.width, 1, ' ', size);
-		ft_putchar(c, size);
-	}
-	else
-		ft_putchar(c, size);
-}
-
 void	ft_digits_parsing_s(char *strx, va_list args, int *p, int *size, t_flags flags)
 {
 	char	*s;

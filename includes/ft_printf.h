@@ -49,7 +49,10 @@ void	ft_minus_parse_hexa_m(char *str, va_list args, int *p, int *size, t_flags f
 void	ft_zero_parsing_hexa_m(char *str, va_list args, int *p, int *size, t_flags flags);
 
 void		ft_parse_char(va_list args, int *size);
-void		ft_parse_char(va_list args, int *size);
+void	ft_digits_parsing_c(char *strx, va_list args, int *p, int *size, t_flags flags);
+void	ft_minus_parse_c(char *str, va_list args, int *p, int *size, t_flags flags);
+void	ft_zero_parsing_c(char *strx, va_list args, int *p, int *size, t_flags flags);
+
 void		ft_parse_str(va_list args, int *size);
 void		ft_parse_ptr(va_list args, int *size);
 void		ft_parse_zero(char *str, va_list args, int *p, int *size);
