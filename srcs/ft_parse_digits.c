@@ -19,7 +19,7 @@ void	ft_digits_parsing_s(char *strx, va_list args, int *p, int *size, t_flags fl
 	}
 	else
 	{
-		ft_print_elem(flags.width, n, ' ', size);
+		ft_print_elem(flags.width, ft_strlen(s), ' ', size);
 		ft_putstr(s, size);
 	}
 }

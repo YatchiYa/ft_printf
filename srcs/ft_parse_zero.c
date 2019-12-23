@@ -12,6 +12,8 @@ void	ft_zero_parsing(char *str, va_list args, int *p, int *size, t_flags flags)
 		ft_zero_parsing_hexa_m(str, args, p, size, flags);
 	if (str[0] == 'c')
 		ft_zero_parsing_c(str, args, p, size, flags);
+	if (str[0] == 's')
+		ft_digits_parsing_s(str, args, p, size, flags);
 }
 
 
