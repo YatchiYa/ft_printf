@@ -123,29 +123,29 @@ int main()
 	ft_printf("%x , %x, |%X|, |%X|\n", 31, -31, 31, -31);
 	printf("%x , %x, %X, %X\n\n\n", 31, -31, 31, -31);
 	
-	ft_printf("%x\n", 42);
-	printf("%x\n\n", 42);
+	ft_printf(" 1 - %x\n", 42);
+	printf(" 1 - %x\n\n", 42);
 
-	ft_printf("%.10X\n", 42);
-	printf("%.10X\n\n", 42);
+	ft_printf("2 - |%.10X|\n", 42);
+	printf("2 - |%.10X|\n\n", 42);
 
-	ft_printf("%-10X\n", 42);
-	printf("%-10X\n\n", 42);
+	ft_printf("3 - |%-10X|\n", 42);
+	printf("3 - |%-10X|\n\n", 42);
 
-	ft_printf("%*x\n", 10, 42);
-	printf("%*x\n\n", 10, 42);
+	ft_printf("4 - |%*x|\n", 10, 42);
+	printf("4 - |%*x|\n\n", 10, 42);
 
-	ft_printf("%-.10X\n", 42);
-	printf("%-.10X\n\n", 42);
+	ft_printf("5 - |%-.10X|\n", 42);
+	printf("5 - |%-.10X|\n\n", 42);
 
-	ft_printf("%0.X\n", 42);
-	printf("%0.X\n\n", 42);
+	ft_printf("6 - |%0.X|\n", 42);
+	printf("6 - |%0.X|\n\n", 42);
 
-	ft_printf("%.*x\n", 10, 42);
-	printf("%.*x\n\n", 10, 42);
+	ft_printf("7 - |%.*x|\n", 10, 42);
+	printf("7 - |%.*x|\n\n", 10, 42);
 
-	ft_printf("%X\n", 9999999);
-	printf("%X\n\n", 9999999);
+	ft_printf("8 - |%X|\n", 9999999);
+	printf("8 - |%X|\n\n", 9999999);
 
 
 	/*
