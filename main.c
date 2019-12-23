@@ -44,11 +44,11 @@ int main()
 	printf("13 - |%0*.d|\n\n", 10, 50);
 */
 
-	printf("\n\n----------STRINGS----------\n\n");
+//	printf("\n\n----------STRINGS----------\n\n");
 
 //	ft_printf("1 - %.10s|\n", s2);
 //	printf("1 - %.10s|\n\n", s2);
-
+/*
 	ft_printf("2 - %020.5s|\n", s2);
 	printf("2 - %020.5s|\n\n", s2);
 
@@ -116,7 +116,7 @@ int main()
 //	printf("20 - %.*s|\n\n", 10, s2);
 
 //	printf("\n\n----------CHARS----------\n\n");
-/*
+
 	
 	ft_printf("%*c|\n", 50, c);
 	printf("%*c|\n\n", 50, c);
@@ -173,6 +173,37 @@ int main()
 	ft_printf("4 - %-*u\n", 30, 2000546511);
 	printf("4 - %-*u\n\n", 30, 2000546511);
 */
+/*
+	printf(" \n \n  ----------- PTR  --------------- \n \n");
+	
+	ft_printf("1 - |%p|\n", &c);
+	printf("1 - |%p|\n\n", &c);
+	
+	ft_printf("2 - |%*p|\n",20, &c);
+	printf("2 - |%*p|\n\n",20, &c);
 
+	ft_printf("2 - |%-20p|\n", &c);
+	printf("2 - |%-20p|\n\n", &c);
+
+	ft_printf("2 - |%-20.5p|\n", &c);
+	printf("2 - |%-20.5p|\n\n", &c);
+*/
+	ft_printf("1 - |%10d| and |%*d|\n", 55, 10, 55);
+	printf("1 - |%10d| and |%*d|\n", 55, 10, 55);
+/*
+	printf("\n \n ---------------------- m ---------------- \n \n");
+	
+	ft_printf("1 - %% \n");
+	printf("1 - %% \n");
+
+	ft_printf("1 - %15% \n");
+	printf("1 - [%15%] \n");
+
+	ft_printf("1 - %010% \n");
+	printf("1 - [%010%] \n");
+
+	ft_printf("1 - %*% \n", 10);
+	printf("1 - [%*%] \n", 10);
+*/
 	return (0);
 }

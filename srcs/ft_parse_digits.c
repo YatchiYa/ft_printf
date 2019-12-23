@@ -18,55 +18,25 @@ void	ft_digits_parsing(char *str, va_list args, int *p, int *size, t_flags flags
 		ft_digits_parsing_hexa(str, args, p, size, flags);
 	else if (str[0] == 'X')
 		ft_digits_parsing_hexa_m(str, args, p, size, flags);
+	else if (str[0] == 'p')
+		ft_digits_parsing_adr(str, args, p, size, flags);
+	else if (str[0] == '%')
+	       ft_putchar('%', size);	
 	clear_struct(&flags);
 }
 
 void	ft_parse_digits(char *str, va_list args, int *p ,int *size)
 {
-	int		i;
-	int		j;
-	char		s[3][500];
 	int		k;
 	t_flags		flags;
 
 	inti_struct(&flags);
-	i = 0;
-	j = 0;
 	k = 0;
-	while (ft_is_type(str[i]) != 1)
+	k+= ft_fill_width(args, &str[k], &flags);
+	if (str[k] == '.')
 	{
-		while (str[i] >= '0' && str[i] <= '9')
-		{
-			s[0][j] = str[i];
-			i++;
-			j++;
-			k++;
-		}
-		flags.width = ft_atoi(s[0]);
-		j = 0;
-		if (str[i] == '.')
-		{
-			i++;
-			k++;
-			while (str[i] >= '0' && str[i] <= '9')
-			{
-				s[1][j] = str[i];
-				i++;
-				j++;
-				k++;
-			}
-			flags.precision = ft_atoi(s[1]);
-			flags.blanks = 1;
-		}
-		if (str[i] == '*')
-		{
-			flags.precision = ft_parse_int_g(args);
-			flags.blanks = 1;
-			i++;
-			k++;
-		}
-		else
-			i++;
+		flags.precision = 0;
+		k+= ft_fill_precision(args, &str[k + 1], &flags) + 1;
 	}
 	*p = *p + k;
 	ft_digits_parsing(str + k, args, p, size, flags);

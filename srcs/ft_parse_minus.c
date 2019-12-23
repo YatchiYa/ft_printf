@@ -14,6 +14,10 @@ void	ft_minus_parsing(char *str, va_list args, int *p, int *size, t_flags flags)
 		ft_minus_parse_c(str, args, p, size, flags);
 	if (str[0] == 's')
 		ft_minus_parse_str(str, args, p, size, flags);
+	if (str[0] == 'p')
+		ft_minus_parse_adr(str, args, p, size, flags);
+	if (str[0] == '%')
+		ft_putchar('%', size);
 	clear_struct(&flags);
 }
 

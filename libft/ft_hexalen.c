@@ -1,11 +1,5 @@
 #include "../includes/ft_printf.h"
 
-void	addelem_tab(char *str, char c, int *i)
-{
-	str[*i] = c;
-	*i = *i + 1; 
-}
-
 int	ft_hexalen_l(unsigned long n)
 {
 	if (n < 16)
@@ -26,6 +20,5 @@ int	ft_hexalen(va_list args)
 	adr = va_arg(argx, void*);
 	n = (unsigned long)adr;
 	len = ft_hexalen_l(n);
-	//printf(" - debug len = %d \n", len);
 	return (len);
 }
