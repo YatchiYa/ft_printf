@@ -53,13 +53,13 @@ void	ft_digits_parsing_c(char *strx, va_list args, int *p, int *size, t_flags fl
 void	ft_minus_parse_c(char *str, va_list args, int *p, int *size, t_flags flags);
 void	ft_zero_parsing_c(char *strx, va_list args, int *p, int *size, t_flags flags);
 
-void	ft_digits_parsing_s(char *strx, va_list args, int *p, int *size, t_flags flags);
-
 void		ft_parse_str(va_list args, int *size);
+void	ft_digits_parsing_s(char *strx, va_list args, int *p, int *size, t_flags flags);
+void	ft_minus_parse_str(char *str, va_list args, int *p, int *size, t_flags flags);
+
 void		ft_parse_ptr(va_list args, int *size);
 void		ft_parse_zero(char *str, va_list args, int *p, int *size);
-void		ft_parse_blanks(char *str, va_list args, int *p, int *size);
-void		ft_parse_zero(char *str, va_list args, int *p, int *size);
+
 void		ft_parse_format(char *str, va_list argsr, int *p, int *size);
 int             ft_printf(const char *str, ...);
 int				ft_str_length_format(char c, va_list args);
