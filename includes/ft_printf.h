@@ -28,6 +28,10 @@ void	ft_minus_parse_id(char *str, va_list args, int *p, int *size, t_flags flags
 void	ft_zero_parsing_id(char *str, va_list args, int *p, int *size, t_flags flags);
 
 void		ft_parse_uint(va_list args, int *p);
+void	ft_minus_parse_u(char *str, va_list args, int *p, int *size, t_flags flags);
+void	ft_zero_parsing_u(char *str, va_list args, int *p, int *size, t_flags flags);
+void	ft_digits_parsing_u(char *str, va_list args, int *p, int *size, t_flags flags);
+
 void		ft_parse_char(va_list args, int *size);
 void		ft_parse_char(va_list args, int *size);
 void		ft_parse_str(va_list args, int *size);

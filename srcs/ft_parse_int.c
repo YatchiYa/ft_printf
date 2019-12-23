@@ -16,14 +16,6 @@ void	ft_parse_hexa_m(va_list args, int *p)
 	ft_putnbr_base(number, HEXA_BASE_M, p);
 }
 
-void	ft_parse_uint(va_list args, int *p)
-{
-	unsigned int	number;
-
-	number = va_arg(args, unsigned int);
-	ft_putnbr_u(number, p);
-}
-
 void	ft_parse_ptr(va_list args, int *p)
 {
 	void		*adr;

@@ -12,7 +12,10 @@ void	ft_putnbr_base(int nb, char *str, int *p);
 int	ft_strchr(char c);
 int	ft_atoi(char *str);
 int		ft_strlen_args(va_list args);
+
 int	ft_numlen(va_list args);
+int	ft_numlen_u(va_list args);
+
 int	ft_isnum(char c);
 void	ft_init_tab(char *tab);
 void	free_tab(char *tab);

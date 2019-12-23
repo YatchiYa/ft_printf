@@ -126,25 +126,3 @@ void	ft_zero_parsing_id(char *str, va_list args, int *p, int *size, t_flags flag
 	}
 	ft_putnbr(number, size);
 }
-
-void	ft_point_parsing_id(char *str, va_list args, int *p, int *size, t_flags flags)
-{
-	int	number;
-	int	i = 0;
-
-	int n = ft_str_length_format(str[0], args);
-	number = va_arg(args, int);
-	if (number < 0)
-	{
-		ft_putchar('-', size);
-		number = number * -1;
-	}
-	if (flags.blanks == 1 && flags.precision != -1)
-	{	
-		ft_print_elem(flags.width, flags.precision, ' ', size);
-		ft_print_elem(flags.precision, n, '0', size);
-	}
-	else if (flags.precision == -1 && flags.blanks == 0)
-		ft_print_elem(flags.width, n, ' ', size);
-	ft_putnbr(number, size);
-}
