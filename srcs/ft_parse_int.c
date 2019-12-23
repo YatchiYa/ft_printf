@@ -24,14 +24,6 @@ void	ft_parse_uint(va_list args, int *p)
 	ft_putnbr_u(number, p);
 }
 
-void	ft_parse_int(va_list args, int *p)
-{
-	int	number;
-
-	number = va_arg(args, int);
-	ft_putnbr(number, p);
-}
-
 void	ft_parse_ptr(va_list args, int *p)
 {
 	void		*adr;

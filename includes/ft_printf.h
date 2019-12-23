@@ -20,9 +20,14 @@
 # define PARSE_LETTERS "diucspxX%"
 # define PARSE_FLAGS "-O.*"
 
-void		ft_parse_uint(va_list args, int *p);
+
 void		ft_parse_int(va_list args, int *i);
 int				ft_parse_int_g(va_list args);
+void	ft_digits_parsing_id(char *str, va_list args, int *p, int *size, t_flags flags);
+void	ft_minus_parse_id(char *str, va_list args, int *p, int *size, t_flags flags);
+void	ft_zero_parsing_id(char *str, va_list args, int *p, int *size, t_flags flags);
+
+void		ft_parse_uint(va_list args, int *p);
 void		ft_parse_char(va_list args, int *size);
 void		ft_parse_char(va_list args, int *size);
 void		ft_parse_str(va_list args, int *size);
