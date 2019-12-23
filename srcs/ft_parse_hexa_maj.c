@@ -23,7 +23,7 @@ void	ft_digits_parsing_hexa_m(char *str, va_list args, int *p, int *size, t_flag
 	}
 	else
 			ft_print_elem(flags.width, n, ' ', size);
-	ft_putadr_maj(number, p);
+	ft_putadr_maj(number, size);
 }
 
 void	ft_minus_parse_hexa_m(char *str, va_list args, int *p, int *size, t_flags flags)
@@ -42,7 +42,7 @@ void	ft_minus_parse_hexa_m(char *str, va_list args, int *p, int *size, t_flags f
 	}
 	else
 	{
-			ft_putadr_maj(number, p);
+			ft_putadr_maj(number, size);
 			ft_print_elem(flags.width, n, ' ', size);
 	}
 }
