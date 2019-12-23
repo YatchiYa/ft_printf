@@ -6,7 +6,7 @@ void	ft_digits_parsing_adr(char *str, va_list args, int *p, int *size, t_flags f
 	unsigned long	number;
 	int		n;
 
-	n = ft_str_length_format(str[0], args) + 2;
+	n = ft_str_length_format(str[0], args);
 	adr = va_arg(args, void*);
 	number = (unsigned long)(adr);
 	if (flags.blanks == 1 && flags.precision != -1)
@@ -28,7 +28,7 @@ void	ft_minus_parse_adr(char *str, va_list args, int *p, int *size, t_flags flag
 	unsigned long	number;
 	int	n;
 
-	n = ft_str_length_format(str[0], args) + 2;
+	n = ft_str_length_format(str[0], args);
 	adr = va_arg(args, void*);
 	number = (unsigned long)(adr);
 	if (flags.blanks == 1 && flags.precision != -1)
@@ -53,7 +53,7 @@ void	ft_zero_parsing_adr(char *str, va_list args, int *p, int *size, t_flags fla
 	unsigned long	number;
 	int	n;
 
-	n = ft_str_length_format(str[0], args) + 2;
+	n = ft_str_length_format(str[0], args);
 	adr = va_arg(args, void*);
 	number = (unsigned long)(adr);
 	if (flags.precision != -1)

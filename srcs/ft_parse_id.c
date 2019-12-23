@@ -121,8 +121,10 @@ void	ft_zero_parsing_id(char *str, va_list args, int *p, int *size, t_flags flag
 		{
 			ft_putchar('-', size);
 			number = number * -1;
+			ft_print_elem(flags.width, n + 1, '0', size);
 		}
-		ft_print_elem(flags.width, n, '0', size);
+		else
+			ft_print_elem(flags.width, n, '0', size);
 	}
 	ft_putnbr(number, size);
 }

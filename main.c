@@ -25,8 +25,8 @@ int main()
 	ft_printf("6 - |%.*d|\n", 10, 50);
 	printf("6 - |%.*d|\n\n", 10, 50);
 
-	ft_printf("7 - |%*.d|\n", 10, -50);
-	printf("7 - |%*.d|\n\n", 10, -50);
+	ft_printf("7 - |%*.d|\n", 10, 50);
+	printf("7 - |%*.d|\n\n", 10, 50);
 
 	ft_printf("8 - |%0*d|\n", 10, 50);
 	printf("9 - |%0*d|\n\n", 10, 50);
@@ -230,11 +230,11 @@ printf("\n\n----------NUMBERS----------\n\n");
 	ft_printf("6 - |%.*d|\n", 10, -50);
 	printf("6 - |%.*d|\n\n", 10, -50);
 
-	ft_printf("7 - |%*.d|\n", 10, --50);
-	printf("7 - |%*.d|\n\n", 10, --50);
+	ft_printf("7 - |%*.d|\n", 10, -50);
+	printf("7 - |%*.d|\n\n", 10, -50);
 
 	ft_printf("8 - |%0*d|\n", 10, -50);
-	printf("9 - |%0*d|\n\n", 10, -50);
+	printf("8 - |%0*d|\n\n", 10, -50);
 
 	ft_printf("10 - |%-.010d|\n", -50);
 	printf("10 - |%-.010d|\n\n", -50);
@@ -409,5 +409,7 @@ printf("\n\n----------NUMBERS----------\n\n");
 
 	ft_printf("1 - %*% \n", 10);
 	printf("1 - [%*%] \n", 10);
+
+
 	return (0);
 }

@@ -7,12 +7,18 @@ int		ft_str_length_format(char c, va_list argx)
 	
 	length = 0;
 	va_copy(args, argx);
-	(c == 'd') || (c == 'i') ? length = ft_numlen(args) : 0;
-	(c == 'x') || (c = 'X') ? length = ft_hexalen(args) : 0;
-	(c == 'u') ? length = ft_numlen_u(args) : 0;
-	(c == 'p') ? length = (ft_putadr_len(args) + 2) : 0;
-	(c == 'c') ? length = 1 : 0;
-	(c == 's') ? length = ft_strlen_args(args) : 0;
+	if (c == 'u')
+		length = ft_numlen_u(args);
+	else if (c == 'd' || c == 'i')
+		length = ft_numlen(args);
+	else if (c == 'x' || c == 'X')
+		length = ft_hexalen(args);
+	else if (c == 'p')
+		length = (ft_putadr_len(args) + 2);
+	else if (c == 'c')
+		length = 1;
+	else if (c == 's')
+		length = ft_strlen_args(args);
 	return (length);
 }
 
