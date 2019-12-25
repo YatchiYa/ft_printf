@@ -24,7 +24,9 @@ void	ft_putadr_maj(unsigned long n, int *p)
 
 void	ft_putadr(unsigned long n, int *p)
 {
-	if (n > 15)
+	if (p == NULL)
+		return ;
+	else if (n > 15)
 	{
 		ft_putadr((n / 16), p);
 		ft_putadr((n % 16), p);

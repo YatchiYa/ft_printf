@@ -7,6 +7,11 @@ void	ft_parse_ptr(va_list args, int *p)
 
 	adr = va_arg(args, void*);
 	num_hex = (unsigned long)(adr);
-	ft_putstr("0x", p);
-	ft_putadr(num_hex, p);
+	if (adr == NULL)
+		ft_putstr("(nil)", p);
+	else
+	{
+		ft_putstr("0x", p);
+		ft_putadr(num_hex, p);
+	}
 }

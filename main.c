@@ -6,6 +6,10 @@ int main()
 	char c = 'a';
 	char	*s;
 
+	printf(" 1 - [%p] \n", NULL);
+	ft_printf(" 1 - [%p] \n", NULL);
+	printf(" 1 - [%020p] \n", NULL);
+	ft_printf(" 1 - [%020p] \n",NULL);
 
 	printf(" 1 - %s and |%*s| and |%*s| \n",  s, 20,  s, -20, s);
 	ft_printf(" 1 - %s and |%*s| and |%*s| \n", s, 20, s, -20, s);

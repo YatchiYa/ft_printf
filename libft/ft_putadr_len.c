@@ -17,7 +17,12 @@ int	ft_putadr_len(va_list args)
 
 	va_copy(argx, args);
 	adr = va_arg(argx, void*);
-	n = (unsigned long)adr;
-	len = ft_putadr_l(n);
-	return (len);
+	if (adr == NULL)
+		return (5);
+	else
+	{
+		n = (unsigned long)adr;
+		len = ft_putadr_l(n);
+		return (len + 2);
+	}
 }

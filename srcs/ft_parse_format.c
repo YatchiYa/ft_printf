@@ -14,7 +14,7 @@ int		ft_str_length_format(char c, va_list argx)
 	else if (c == 'x' || c == 'X')
 		length = ft_hexalen(args);
 	else if (c == 'p')
-		length = (ft_putadr_len(args) + 2);
+		length = (ft_putadr_len(args));
 	else if (c == 'c')
 		length = 1;
 	else if (c == 's')
