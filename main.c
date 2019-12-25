@@ -4,8 +4,42 @@ int main()
 {
 	char s2[] = "salut ca va bien";
 	char c = 'a';
+	char	*s;
 
-	printf("ret = %d -> ", printf("\n\n----------NUMBERS----------\n\n"));
+
+	printf(" 1 - %s and |%*s| and |%*s| \n",  s, 20,  s, -20, s);
+	ft_printf(" 1 - %s and |%*s| and |%*s| \n", s, 20, s, -20, s);
+
+	
+	ft_printf("1 - |%0*.*s|\n",-20, -5, s2);
+	printf("1 - |%0*.*s|\n",-20, -5, s2);
+
+	ft_printf("1 - |%*.*d|\n", -20, -5, 50);
+	printf("1 - |%*.*d|\n", -20, -5, 50);
+
+	
+	ft_printf("1 - |%20.*s|\n", -5, s2);
+	printf("1 - |%20.*s|\n", -5, s2);
+
+	ft_printf("1 - |%*.*s|\n", 20, -5, s2);
+	printf("1 - |%*.*s|\n", 20, -5, s2);
+
+	ft_printf("2 - |%*s|\n", -20, s2);
+	printf("2 - |%*s|\n", -20, s2);
+
+	ft_printf("3 - |%*.*s|\n", -20, -5, s2);
+	printf("3 - |%*.*s|\n", -20, -5, s2);
+	
+	ft_printf("1 - |%*.*d|\n", 10, -5, 50);
+	printf("1 - |%*.*d|\n", 10, -5, 50);
+
+	ft_printf("1 - |%.*d|\n",  -5, 50);
+	printf("1 - |%.*d|\n", -5, 50);
+
+	ft_printf("1 - |%*d| and |%*d|\n",5, 50, -5, 50);
+	printf("1 - [%*d| and |%*d|\n", 5 , 50, -5, 50);
+
+	printf("\n\n----------NUMBERS----------\n\n");
 
 	printf("ret = %d -> ", printf("1 - |%d|\n", 50));
 	ft_printf("ret = %d -> ", ft_printf("1 - |%d|\n", 50));
@@ -208,9 +242,9 @@ int main()
 
 
 
-printf("\n\n----------SECOND PART----------\n\n"));
+	printf("\n\n----------SECOND PART----------\n\n");
 
-printf("\n\n----------NUMBERS----------\n\n"));
+	printf("\n\n----------NUMBERS----------\n\n");
 
 	printf("ret = %d -> ", printf("1 - |%d|\n", -50));
 	ft_printf("ret = %d -> ", ft_printf("1 - |%d|\n", -50));
@@ -410,6 +444,5 @@ printf("\n\n----------NUMBERS----------\n\n"));
 	ft_printf("ret = %d -> ", ft_printf("1 - %*% \n", 10));
 	printf("ret = %d -> ", printf("1 - [%*%] \n", 10));
 
-
-	return (0));
+	return (0);
 }

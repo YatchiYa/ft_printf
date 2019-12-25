@@ -11,5 +11,20 @@ void	ft_parse_point(char *str, va_list args, int *p ,int *size)
 	k++;
 	k += ft_fill_precision(args, &str[k], &flags);
 	*p = *p + k;
-	ft_digits_parsing(str + k, args, p, size, flags);
+	if (flags.precision < 0)
+	{
+		if (str[k] == 's')
+		{
+			flags.precision = -1;
+			ft_minus_parsing(str + k, args, p, size, flags);
+		
+		}
+		else
+		{
+			flags.precision = 0;
+			ft_digits_parsing(str + k, args, p, size, flags);
+		}	
+	}
+	else
+		ft_digits_parsing(str + k, args, p, size, flags);
 }

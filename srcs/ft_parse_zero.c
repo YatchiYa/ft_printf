@@ -34,5 +34,14 @@ void	ft_parse_zero(char *str, va_list args, int *p ,int *size)
 		k += ft_fill_precision(args, &str[k + 1], &flags) + 1;
 	}
 	*p = *p + k + 1;
-	ft_zero_parsing(str + k, args, p, size, flags);
+	if (flags.precision < 0)
+		if (str[k] == 's')
+				flags.precision = -1;
+	if (flags.width < 0)
+	{
+		flags.width *= -1;
+		ft_minus_parsing(str + k, args, p, size, flags);
+	}
+	else
+		ft_zero_parsing(str + k, args, p, size, flags);
 }

@@ -5,6 +5,7 @@ void		ft_parse_str(va_list args, int *size)
 	char	*str;
 
 	str = va_arg(args, char*);
+	str == NULL ? str = ft_strdup("(null)"): str;
 	ft_putstr(str, size);
 }
 
@@ -12,9 +13,11 @@ void	ft_digits_parsing_s(char *strx, va_list args, int *p, int *size, t_flags fl
 {
 	char	*s;
 	int	i;
+	int	n;
 
-	int n = ft_str_length_format(strx[0], args);
+	n = ft_str_length_format(strx[0], args);
 	s = va_arg(args, char*);
+	s == NULL ? s = ft_strdup("(null)"): s;
 	i = 0;
 	if (flags.precision != -1)
 	{
@@ -40,6 +43,7 @@ void	ft_minus_parse_str(char *str, va_list args, int *p, int *size, t_flags flag
 
 	n = ft_str_length_format(str[0], args);
 	s = va_arg(args, char*);
+	s == NULL ? s = ft_strdup("(null)"): s;
 	i = 0;
 	if (flags.precision != -1)
 	{

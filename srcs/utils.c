@@ -28,6 +28,17 @@ int	ft_is_flags(char c)
 	return (0);
 }
 
+int	ft_parse_int_tmp(va_list args)
+{
+	va_list		argx;
+
+	int		number;
+
+	va_copy(argx, args);
+	number = va_arg(args, int);
+	return (number);
+}
+
 int	ft_parse_int_g(va_list args)
 {
 	int	number;

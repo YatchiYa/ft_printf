@@ -3,6 +3,7 @@
 
 #include <unistd.h>
 
+char	*ft_strdup(const	char *s);
 void	ft_putchar(char c, int *p);
 void	ft_putnbr(int nb, int *p);
 void	ft_putnbr_u(unsigned int nb, int *p);
