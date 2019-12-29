@@ -1,6 +1,6 @@
 #include "../includes/ft_printf.h"
 
-void	ft_digits_parsing_id_extends(t_flags flags, int number, int *size)
+void	ft_digits_parsing_id_extends(t_flags flags, int number, int *size, int n)
 {
 		if (number < 0)
 		{
@@ -20,7 +20,7 @@ void	ft_digits_parsing_id_extends(t_flags flags, int number, int *size)
 		}
 }
 
-void	ft_minus_parse_id_extends(t_flags flags, int number, int *size)
+void	ft_minus_parse_id_extends(t_flags flags, int number, int *size, int n)
 {
 		if (number < 0)
 		{

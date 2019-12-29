@@ -16,7 +16,7 @@ void	ft_digits_parsing_id(char *str, va_list args, int *size, t_flags flags)
 	n = ft_str_length_format(str[0], args);
 	number = va_arg(args, int);
 	if (flags.blanks == 1 && flags.precision != -1)
-		ft_digits_parsing_id_extends(flags, number, size);
+		ft_digits_parsing_id_extends(flags, number, size, n);
 	else
 	{
 		if (number < 0)
@@ -39,7 +39,7 @@ void	ft_minus_parse_id(char *str, va_list args, int *size, t_flags flags)
 	n = ft_str_length_format(str[0], args);
 	number = va_arg(args, int);
 	if (flags.blanks == 1 && flags.precision != -1)
-		ft_minus_parse_id_extends(flags, number, size);
+		ft_minus_parse_id_extends(flags, number, size, n);
 	else
 	{
 		if (number < 0)
@@ -65,7 +65,7 @@ void	ft_zero_parsing_id(char *str, va_list args, int *size, t_flags flags)
 	n = ft_str_length_format(str[0], args);
 	number = va_arg(args, int);
 	if (flags.precision != -1)
-		ft_digits_parsing_id_extends(flags, number, size);
+		ft_digits_parsing_id_extends(flags, number, size, n);
 	else if (flags.precision == -1 && flags.blanks == 0)
 	{
 		if (number < 0)
