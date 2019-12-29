@@ -13,7 +13,7 @@ void	ft_minus_parsing(char *str, va_list args, int *p, int *size, t_flags flags)
 	if (str[0] == 'c')
 		ft_minus_parse_c(args, size, flags);
 	if (str[0] == 's')
-		ft_minus_parse_str(str, args, p, size, flags);
+		ft_minus_parse_str(args, size, flags);
 	if (str[0] == 'p')
 		ft_minus_parse_adr(str, args, p, size, flags);
 	if (str[0] == '%')

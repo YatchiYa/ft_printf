@@ -55,8 +55,8 @@ void			ft_minus_parse_c(va_list args, int *size, t_flags flags);
 void			ft_zero_parsing_c(va_list args, int *size, t_flags flags);
 
 void			ft_parse_str(va_list args, int *size);
-void			ft_digits_parsing_s(char *strx, va_list args, int *p, int *size, t_flags flags);
-void			ft_minus_parse_str(char *str, va_list args, int *p, int *size, t_flags flags);
+void			ft_digits_parsing_s(va_list args, int *size, t_flags flags);
+void			ft_minus_parse_str(va_list args, int *size, t_flags flags);
 
 void			ft_digits_parsing_adr(char *str, va_list args, int *p, int *size, t_flags flags);
 void			ft_minus_parse_adr(char *str, va_list args, int *p, int *size, t_flags flags);

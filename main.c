@@ -2,6 +2,7 @@
 
 int main()
 {
+	/*
 	char s2[] = "salut ca va bien";
 	char c = 'a';
 	char	*s;
@@ -447,6 +448,6 @@ int main()
 
 	ft_printf("1 - %*% \n", 10);
 	printf("1 - [%*%] \n", 10);
-
+*/
 	return (0);
 }

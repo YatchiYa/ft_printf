@@ -11,7 +11,7 @@ void		ft_parse_str(va_list args, int *size)
 	free(str);
 }
 
-void	ft_digits_parsing_s(char *strx, va_list args, int *p, int *size, t_flags flags)
+void	ft_digits_parsing_s(va_list args, int *size, t_flags flags)
 {
 	char	*s;
 	int		i;
@@ -37,7 +37,7 @@ void	ft_digits_parsing_s(char *strx, va_list args, int *p, int *size, t_flags fl
 	free(s);
 }
 
-void	ft_minus_parse_str(char *strx, va_list args, int *p, int *size, t_flags flags)
+void	ft_minus_parse_str(va_list args, int *size, t_flags flags)
 {
 	char	*s;
 	int		i;

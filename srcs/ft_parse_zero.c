@@ -13,7 +13,7 @@ void	ft_zero_parsing(char *str, va_list args, int *p, int *size, t_flags flags)
 	if (str[0] == 'c')
 		ft_zero_parsing_c(args, size, flags);
 	if (str[0] == 's')
-		ft_digits_parsing_s(str, args, p, size, flags);
+		ft_digits_parsing_s(args, size, flags);
 	if (str[0] == '%')
 	       ft_putchar('%', size);
 	if (str[0] == 'p')
