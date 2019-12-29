@@ -33,6 +33,8 @@ int				ft_parse_int_tmp(va_list args);
 void			ft_digits_parsing_id(char *str, va_list args, int *size, t_flags flags);
 void			ft_minus_parse_id(char *str, va_list args, int *size, t_flags flags);
 void			ft_zero_parsing_id(char *str, va_list args, int *size, t_flags flags);
+void			ft_digits_parsing_id_extends(t_flags flags, int number, int *size)
+void			ft_minus_parse_id_extends(t_flags flags, int number, int *size)
 
 void			ft_parse_uint(va_list args, int *p);
 void			ft_minus_parse_u(char *str, va_list args, int *size, t_flags flags);
