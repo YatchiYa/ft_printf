@@ -46,3 +46,12 @@ int	ft_parse_int_g(va_list args)
 	number = va_arg(args, int);
 	return (number);
 }
+
+void	ft_print_elem(int w, int p, char c, int *size)
+{
+	while (w > p)
+	{
+		ft_putchar(c, size);
+		p++;
+	}
+}
