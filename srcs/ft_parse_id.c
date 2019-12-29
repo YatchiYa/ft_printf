@@ -8,7 +8,7 @@ void	ft_parse_int(va_list args, int *p)
 	ft_putnbr(number, p);
 }
 
-void	ft_digits_parsing_id(char *str, va_list args, int *p, int *size, t_flags flags)
+void	ft_digits_parsing_id(char *str, va_list args, int *size, t_flags flags)
 {
 	int	number;
 	int	n;
@@ -46,7 +46,7 @@ void	ft_digits_parsing_id(char *str, va_list args, int *p, int *size, t_flags fl
 	ft_putnbr(number, size);
 }
 
-void	ft_minus_parse_id(char *str, va_list args, int *p, int *size, t_flags flags)
+void	ft_minus_parse_id(char *str, va_list args, int *size, t_flags flags)
 {
 	int	number;
 	int	n;
@@ -90,7 +90,7 @@ void	ft_minus_parse_id(char *str, va_list args, int *p, int *size, t_flags flags
 	}
 }
 
-void	ft_zero_parsing_id(char *str, va_list args, int *p, int *size, t_flags flags)
+void	ft_zero_parsing_id(char *str, va_list args, int *size, t_flags flags)
 {
 	int	number;
 	int	n;

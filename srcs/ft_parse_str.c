@@ -15,10 +15,8 @@ void	ft_digits_parsing_s(char *strx, va_list args, int *p, int *size, t_flags fl
 {
 	char	*s;
 	int		i;
-	int		n;
 	char	*t;
 
-	n = ft_str_length_format(strx[0], args);
 	t = va_arg(args, char*);
 	s = (t == NULL) ? ft_strdup("(null)") : ft_strdup(t);
 	i = 0;
@@ -43,10 +41,8 @@ void	ft_minus_parse_str(char *strx, va_list args, int *p, int *size, t_flags fla
 {
 	char	*s;
 	int		i;
-	int		n;
 	char	*t;
 
-	n = ft_str_length_format(strx[0], args);
 	t = va_arg(args, char*);
 	s = (t == NULL) ? ft_strdup("(null)") : ft_strdup(t);
 	i = 0;

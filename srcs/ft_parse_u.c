@@ -8,7 +8,7 @@ void	ft_parse_uint(va_list args, int *p)
 	ft_putnbr_u(number, p);
 }
 
-void	ft_minus_parse_u(char *str, va_list args, int *p, int *size, t_flags flags)
+void	ft_minus_parse_u(char *str, va_list args, int *size, t_flags flags)
 {
 	unsigned int    number;
 	int	            n;
@@ -30,7 +30,7 @@ void	ft_minus_parse_u(char *str, va_list args, int *p, int *size, t_flags flags)
 }
 
 
-void	ft_zero_parsing_u(char *str, va_list args, int *p, int *size, t_flags flags)
+void	ft_zero_parsing_u(char *str, va_list args, int *size, t_flags flags)
 {
 	unsigned int	number;
 	int	n;
@@ -49,7 +49,7 @@ void	ft_zero_parsing_u(char *str, va_list args, int *p, int *size, t_flags flags
 }
 
 
-void	ft_digits_parsing_u(char *str, va_list args, int *p, int *size, t_flags flags)
+void	ft_digits_parsing_u(char *str, va_list args, int *size, t_flags flags)
 {
 	unsigned int	number;
 	int	n;

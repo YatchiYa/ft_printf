@@ -2,22 +2,18 @@
 
 void	ft_digits_parsing(char *str, va_list args, int *p, int *size, t_flags flags)
 {
-	char	t[550];
-	int	number;
-	int	n;
-
 	if (str[0] == 's')
 		ft_digits_parsing_s(str, args, p, size, flags);
 	else if (str[0] == 'c')
-		ft_digits_parsing_c(str, args, p, size, flags);
+		ft_digits_parsing_c(args, size, flags);
 	else if (str[0] == 'u')
-		ft_digits_parsing_u(str, args, p, size, flags);
+		ft_digits_parsing_u(str, args, size, flags);
 	else if (str[0] == 'd' || str[0] == 'i')
-		ft_digits_parsing_id(str, args, p, size, flags);
+		ft_digits_parsing_id(str, args, size, flags);
 	else if (str[0] == 'x')
-		ft_digits_parsing_hexa(str, args, p, size, flags);
+		ft_digits_parsing_hexa(str, args, size, flags);
 	else if (str[0] == 'X')
-		ft_digits_parsing_hexa_m(str, args, p, size, flags);
+		ft_digits_parsing_hexa_m(str, args, size, flags);
 	else if (str[0] == 'p')
 		ft_digits_parsing_adr(str, args, p, size, flags);
 	else if (str[0] == '%')

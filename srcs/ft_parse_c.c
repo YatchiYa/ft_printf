@@ -8,7 +8,7 @@ void		ft_parse_char(va_list args, int *size)
 	ft_putchar(c, size);
 }
 
-void	ft_digits_parsing_c(char *strx, va_list args, int *p, int *size, t_flags flags)
+void	ft_digits_parsing_c(va_list args, int *size, t_flags flags)
 {
 	char	c;
 
@@ -22,7 +22,7 @@ void	ft_digits_parsing_c(char *strx, va_list args, int *p, int *size, t_flags fl
 		ft_putchar(c, size);
 }
 
-void	ft_minus_parse_c(char *str, va_list args, int *p, int *size, t_flags flags)
+void	ft_minus_parse_c(va_list args, int *size, t_flags flags)
 {
 	char	c;
 
@@ -36,7 +36,7 @@ void	ft_minus_parse_c(char *str, va_list args, int *p, int *size, t_flags flags)
 		ft_putchar(c, size);
 }
 
-void	ft_zero_parsing_c(char *strx, va_list args, int *p, int *size, t_flags flags)
+void	ft_zero_parsing_c(va_list args, int *size, t_flags flags)
 {
 	char	c;
 

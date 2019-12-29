@@ -3,15 +3,15 @@
 void	ft_minus_parsing(char *str, va_list args, int *p, int *size, t_flags flags)
 {
 	if (str[0] == 'd' || str[0] == 'i')
-		ft_minus_parse_id(str, args, p, size, flags);
+		ft_minus_parse_id(str, args, size, flags);
 	if (str[0] == 'u')
-		ft_minus_parse_u(str, args, p, size, flags);
+		ft_minus_parse_u(str, args, size, flags);
 	if (str[0] == 'x')
-		ft_minus_parse_hexa(str, args, p, size, flags);
+		ft_minus_parse_hexa(str, args, size, flags);
 	if (str[0] == 'X')
-		ft_minus_parse_hexa_m(str, args, p, size, flags);
+		ft_minus_parse_hexa_m(str, args, size, flags);
 	if (str[0] == 'c')
-		ft_minus_parse_c(str, args, p, size, flags);
+		ft_minus_parse_c(args, size, flags);
 	if (str[0] == 's')
 		ft_minus_parse_str(str, args, p, size, flags);
 	if (str[0] == 'p')
