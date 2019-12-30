@@ -1,8 +1,7 @@
-#include "./includes/ft_printf.h"
+#include "./ft_printf.h"
 
 int main()
 {
-	
 	char s2[] = "salut ca va bien";
 	char c = 'a';
 	char	*s;
@@ -440,13 +439,13 @@ int main()
 	ft_printf("1 - %% \n");
 	printf("1 - %% \n");
 
-	ft_printf("1 - %15% \n");
+	ft_printf("1 - [%15%] \n");
 	printf("1 - [%15%] \n");
 
-	ft_printf("1 - %010% \n");
+	ft_printf("1 - [%010%] \n");
 	printf("1 - [%010%] \n");
 
-	ft_printf("1 - %*% \n", 10);
+	ft_printf("1 - [%*%] \n", 10);
 	printf("1 - [%*%] \n", 10);
 
 	return (0);
