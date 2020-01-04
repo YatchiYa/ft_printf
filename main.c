@@ -2,8 +2,6 @@
 
 int main()
 {
-	printf("|%5|\n", "\0");
-	printf("-> %d\n ", printf("|%5|\n", "\0"));
 	/*
 	char s2[] = "salut ca va bien";
 	char c = 'a';
