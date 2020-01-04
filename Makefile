@@ -1,5 +1,5 @@
 # **************************************************************************** #
-#                                                                              #
+#                                                                      		   #
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
@@ -10,8 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 
+SRCS		= ft_parse_c.c ft_parse_point.c ft_strdup.c ft_parse_digits.c ft_parse_prc.c ft_putadr.c ft_strlen.c ft_atoi.c ft_parse_format.c ft_parse_ptr.c  ft_putadr_len.c  ft_strlen_args.c ft_fill_width_precision.c  ft_parse_hexa.c ft_parse_stars.c  ft_putchar.c ft_struct_parse.c ft_hexalen.c  ft_parse_hexa_maj.c  ft_parse_str.c  ft_putnbr.c ft_isnum.c ft_parse_id.c ft_parse_u.c ft_putnbr_u.c pftft_numlen.c ft_parse_id_extends.c ft_parse_zero.c ft_putstr.c testsft_parse_adr.c ft_parse_minus.c ft_printf.c ft_strchr.c utils.c
 
-SRCS		= ft_parse_c.c           ft_parse_point.c  ft_printf.h      ft_strdup.c                    ft_parse_digits.c      ft_parse_prc.c    ft_putadr.c      ft_strlen.cft_atoi.c                  ft_parse_format.c      ft_parse_ptr.c    ft_putadr_len.c  ft_strlen_args.cft_fill_width_precision.c  ft_parse_hexa.c        ft_parse_stars.c  ft_putchar.c     ft_struct_parse.cft_hexalen.c               ft_parse_hexa_maj.c    ft_parse_str.c    ft_putnbr.c      ft_isnum.c                 ft_parse_id.c          ft_parse_u.c      ft_putnbr_u.c    pftft_numlen.c                ft_parse_id_extends.c  ft_parse_zero.c   ft_putstr.c      testsft_parse_adr.c             ft_parse_minus.c       ft_printf.c       ft_strchr.c      utils.c
 HEADER		=	ft_printf.h
 
 OBJS		=	${SRCS:.c=.o}
