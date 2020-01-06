@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 09:57:02 by yarab             #+#    #+#             */
-/*   Updated: 2019/12/30 10:49:53 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/06 12:03:18 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,10 @@ void	ft_parse_minus(char *str, va_list args, int *p, int *size)
 	if (str[k] != '.')
 		k += ft_fill_width(args, &str[k], &flags);
 	if (str[k] == '.')
+	{
+		flags.precision = 0;
 		k += ft_fill_precision(args, &str[k + 1], &flags) + 1;
+	}
 	*p = *p + k + 1;
 	ft_minus_parsing(str + k, args, size, flags);
 }

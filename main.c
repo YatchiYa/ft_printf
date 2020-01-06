@@ -2,11 +2,15 @@
 
 int main()
 {
-	/*
-	char s2[] = "salut ca va bien";
+	
+	char s2[] = "yolo";
+	char s3[] = "     salut ca va bien    ";
 	char c = 'a';
 	char	*s;
 
+
+
+/*
 	printf(" 1 - [%p] \n", NULL);
 	ft_printf(" 1 - [%p] \n", NULL);
 	printf(" 1 - [%020p] \n", NULL);
@@ -82,78 +86,98 @@ int main()
 	ft_printf("13 - |%0*.d|\n", 10, 50);
 	printf("13 - |%0*.d|\n\n", 10, 50);
 
+*/
 
-	printf("\n\n----------STRINGS----------\n\n");
 
-	ft_printf("1 - %.10s|\n", s2);
-	printf("1 - %.10s|\n\n", s2);
+	// ft_printf("112 - |%7s|\n", s2);
+	// printf("112 - |%7s|\n\n", s2);
 
-	ft_printf("2 - %020.5s|\n", s2);
-	printf("2 - %020.5s|\n\n", s2);
+	// ft_printf("110 - |%7.5s|\n", s2);
+	// printf("110 - |%7.5s|\n\n", s2);
 
-	ft_printf("2 - %-10s|\n", s2);
-	printf("2 - %-10s|\n\n", s2);
+	// ft_printf("110 - |%8.6s|\n", s2);
+	// printf("110 - |%8.6s|\n\n", s2);
 
-	ft_printf("3 - %-.5s|\n", s2);
-	printf("3 - %-.5s|\n\n", s2);
+	// ft_printf("11 - |%*.s|\n", 10, s2);
+	// printf("11 - |%*.s|\n\n", 10, s2);
 
-	ft_printf("4 - %.010s|\n", s2);
-	printf("4 - %.010s|\n\n", s2);
+	// printf("\n\n----------STRINGS----------\n\n");
 
-	ft_printf("5 - %.40s|\n", s2);
-	printf("5 - %.40s|\n\n", s2);
+	// ft_printf("0 - |%.s|\n", s2);
+	// printf("0 - |%.s|\n\n", s2);
 
-	ft_printf("6 - %-40s|\n", s2);
-	printf("6 - %-40s|\n\n", s2);
+	// ft_printf("0 - |%.s|\n", s3);
+	// printf("0 - |%.s|\n\n", s3);
+	
+	// ft_printf("1 - %.10s|\n", s2);
+	// printf("1 - %.10s|\n\n", s2);
 
-	ft_printf("7 - %-.40s|\n", s2);
-	printf("7 - %-.40s|\n\n", s2);
+	// ft_printf("2 - %020.5s|\n", s2);
+	// printf("2 - %020.5s|\n\n", s2);
 
-	ft_printf("8 - %.040s|\n", s2);
-	printf("8 - %.040s|\n\n", s2);
+	// ft_printf("2 - %-10s|\n", s2);
+	// printf("2 - %-10s|\n\n", s2);
 
-	ft_printf("9 - %.*s|\n", 10, s2);
-	printf("9 - %.*s|\n\n", 10, s2);
+	// ft_printf("3 - %-.5s|\n", s2);
+	// printf("3 - %-.5s|\n\n", s2);
 
-	ft_printf("10 - %-*s|\n", 10, s2);
-	printf("10 - %-*s|\n\n", 10, s2);
+	// ft_printf("4 - %.010s|\n", s2);
+	// printf("4 - %.010s|\n\n", s2);
 
-	ft_printf("11 - |%*.s|\n", 10, s2);
-	printf("11 - |%*.s|\n\n", 10, s2);
+	// ft_printf("5 - %.40s|\n", s2);
+	// printf("5 - %.40s|\n\n", s2);
 
-	ft_printf("12 - %.*s|\n", 10, s2);
-	printf("12 - %.*s|\n\n", 10, s2);
+	// ft_printf("6 - %-40s|\n", s2);
+	// printf("6 - %-40s|\n\n", s2);
 
-	ft_printf("13 - %.50s|\n", s2);
-	printf("13 - %.50s|\n\n", s2);
+	// ft_printf("7 - %-.40s|\n", s2);
+	// printf("7 - %-.40s|\n\n", s2);
 
-	ft_printf("14 - %-50s|\n", s2);
-	printf("14 - %-50s|\n\n", s2);
+	// ft_printf("8 - %.040s|\n", s2);
+	// printf("8 - %.040s|\n\n", s2);
 
-	ft_printf("15 - %-.50s|\n", s2);
-	printf("15 - %-.50s|\n\n", s2);
+	// ft_printf("9 - %.*s|\n", 10, s2);
+	// printf("9 - %.*s|\n\n", 10, s2);
 
-	ft_printf("16 - %.050s|\n", s2);
-	printf("16 - %.050s|\n\n", s2);
+	// ft_printf("10 - %-*s|\n", 10, s2);
+	// printf("10 - %-*s|\n\n", 10, s2);
 
-	ft_printf("17 - %.*s|\n", 50, s2);
-	printf("17 - %.*s|\n\n", 50, s2);
+	// ft_printf("11 - |%*.s|\n", 10, s2);
+	// printf("11 - |%*.s|\n\n", 10, s2);
 
-	ft_printf("18 - %-*s|\n", 50, s2);
-	printf("18 - %-*s|\n\n", 50, s2);
+	// ft_printf("12 - %.*s|\n", 10, s2);
+	// printf("12 - %.*s|\n\n", 10, s2);
 
-	ft_printf("19 - %*.s|\n", 50, s2);
-	printf("19 - %*.s|\n\n", 50, s2);
+	// ft_printf("13 - %.50s|\n", s2);
+	// printf("13 - %.50s|\n\n", s2);
 
-	ft_printf("19 - |%*.0s|\n", 50, s2);
-	printf("19 - |%*.0s|\n\n", 50, s2);
+	// ft_printf("14 - %-50s|\n", s2);
+	// printf("14 - %-50s|\n\n", s2);
 
-	ft_printf("19 - %*.2s|\n", 50, s2);
-	printf("19 - %*.2s|\n\n", 50, s2);
+	// ft_printf("15 - %-.50s|\n", s2);
+	// printf("15 - %-.50s|\n\n", s2);
 
-	ft_printf("20 - %.*s|\n", 10, s2);
-	printf("20 - %.*s|\n\n", 10, s2);
+	// ft_printf("16 - %.050s|\n", s2);
+	// printf("16 - %.050s|\n\n", s2);
 
+	// ft_printf("17 - %.*s|\n", 50, s2);
+	// printf("17 - %.*s|\n\n", 50, s2);
+
+	// ft_printf("18 - %-*s|\n", 50, s2);
+	// printf("18 - %-*s|\n\n", 50, s2);
+
+	// ft_printf("19 - %*.s|\n", 50, s2);
+	// printf("19 - %*.s|\n\n", 50, s2);
+
+	// ft_printf("19 - |%*.0s|\n", 50, s2);
+	// printf("19 - |%*.0s|\n\n", 50, s2);
+
+	// ft_printf("19 - %*.2s|\n", 50, s2);
+	// printf("19 - %*.2s|\n\n", 50, s2);
+
+	// ft_printf("20 - %.*s|\n", 10, s2);
+	// printf("20 - %.*s|\n\n", 10, s2);
+/*
 	printf("\n\n----------CHARS----------\n\n");
 
 	
@@ -287,78 +311,97 @@ int main()
 	ft_printf("13 - |%0*.d|\n", 10, -50);
 	printf("13 - |%0*.d|\n\n", 10, -50);
 
+*/
+	// printf("\n\n----------STRINGS----------\n\n");
 
-	printf("\n\n----------STRINGS----------\n\n");
+	ft_printf("0 - |%03s|\n\n", s2);
+	printf("0 - |%03s|\n\n", s2);
 
-	ft_printf("1 - %.10s|\n", s2);
-	printf("1 - %.10s|\n\n", s2);
+	ft_printf("0 - |%-8s|\n\n", s2);
+	printf("0 - |%-8s|\n\n", s2);
 
-	ft_printf("2 - %020.5s|\n", s2);
-	printf("2 - %020.5s|\n\n", s2);
+	// ft_printf("0 - |%09s|\n", s2);
+	// printf("0 - |%09s|\n\n", s2);
 
-	ft_printf("2 - %-10s|\n", s2);
-	printf("2 - %-10s|\n\n", s2);
 
-	ft_printf("3 - %-.5s|\n", s2);
-	printf("3 - %-.5s|\n\n", s2);
+	// ft_printf("0 - |%-7.5s|\n", s2);
+	// printf("0 - |%-7.5s|\n\n", s2);
 
-	ft_printf("4 - %.010s|\n", s2);
-	printf("4 - %.010s|\n\n", s2);
 
-	ft_printf("5 - %.40s|\n", s2);
-	printf("5 - %.40s|\n\n", s2);
+	// ft_printf("0 - %.s|\n", s2);
+	// printf("0 - %.s|\n\n", s2);
 
-	ft_printf("6 - %-40s|\n", s2);
-	printf("6 - %-40s|\n\n", s2);
 
-	ft_printf("7 - %-.40s|\n", s2);
-	printf("7 - %-.40s|\n\n", s2);
+	// ft_printf("1 - %.10s|\n", s2);
+	// printf("1 - %.10s|\n\n", s2);
 
-	ft_printf("8 - %.040s|\n", s2);
-	printf("8 - %.040s|\n\n", s2);
+	// ft_printf("2 - %020.5s|\n", s2);
+	// printf("2 - %020.5s|\n\n", s2);
 
-	ft_printf("9 - %.*s|\n", 10, s2);
-	printf("9 - %.*s|\n\n", 10, s2);
+	// ft_printf("2 - %-10s|\n", s2);
+	// printf("2 - %-10s|\n\n", s2);
 
-	ft_printf("10 - %-*s|\n", 10, s2);
-	printf("10 - %-*s|\n\n", 10, s2);
+	// ft_printf("3 - %-.5s|\n", s2);
+	// printf("3 - %-.5s|\n\n", s2);
 
-	ft_printf("11 - |%*.s|\n", 10, s2);
-	printf("11 - |%*.s|\n\n", 10, s2);
+	// ft_printf("4 - %.010s|\n", s2);
+	// printf("4 - %.010s|\n\n", s2);
 
-	ft_printf("12 - %.*s|\n", 10, s2);
-	printf("12 - %.*s|\n\n", 10, s2);
+	// ft_printf("5 - %.40s|\n", s2);
+	// printf("5 - %.40s|\n\n", s2);
 
-	ft_printf("13 - %.50s|\n", s2);
-	printf("13 - %.50s|\n\n", s2);
+	// ft_printf("6 - %-40s|\n", s2);
+	// printf("6 - %-40s|\n\n", s2);
 
-	ft_printf("14 - %-50s|\n", s2);
-	printf("14 - %-50s|\n\n", s2);
+	// ft_printf("7 - %-.40s|\n", s2);
+	// printf("7 - %-.40s|\n\n", s2);
 
-	ft_printf("15 - %-.50s|\n", s2);
-	printf("15 - %-.50s|\n\n", s2);
+	// ft_printf("8 - %.040s|\n", s2);
+	// printf("8 - %.040s|\n\n", s2);
 
-	ft_printf("16 - %.050s|\n", s2);
-	printf("16 - %.050s|\n\n", s2);
+	// ft_printf("9 - %.*s|\n", 10, s2);
+	// printf("9 - %.*s|\n\n", 10, s2);
 
-	ft_printf("17 - %.*s|\n", 50, s2);
-	printf("17 - %.*s|\n\n", 50, s2);
+	// ft_printf("10 - %-*s|\n", 10, s2);
+	// printf("10 - %-*s|\n\n", 10, s2);
 
-	ft_printf("18 - %-*s|\n", 50, s2);
-	printf("18 - %-*s|\n\n", 50, s2);
+	// ft_printf("11 - |%*.s|\n", 10, s2);
+	// printf("11 - |%*.s|\n\n", 10, s2);
 
-	ft_printf("19 - %*.s|\n", 50, s2);
-	printf("19 - %*.s|\n\n", 50, s2);
+	// ft_printf("12 - %.*s|\n", 10, s2);
+	// printf("12 - %.*s|\n\n", 10, s2);
 
-	ft_printf("19 - |%*.0s|\n", 50, s2);
-	printf("19 - |%*.0s|\n\n", 50, s2);
+	// ft_printf("13 - %.50s|\n", s2);
+	// printf("13 - %.50s|\n\n", s2);
 
-	ft_printf("19 - %*.2s|\n", 50, s2);
-	printf("19 - %*.2s|\n\n", 50, s2);
+	// ft_printf("14 - %-50s|\n", s2);
+	// printf("14 - %-50s|\n\n", s2);
 
-	ft_printf("20 - %.*s|\n", 10, s2);
-	printf("20 - %.*s|\n\n", 10, s2);
+	// ft_printf("15 - %-.50s|\n", s2);
+	// printf("15 - %-.50s|\n\n", s2);
 
+	// ft_printf("16 - %.050s|\n", s2);
+	// printf("16 - %.050s|\n\n", s2);
+
+	// ft_printf("17 - %.*s|\n", 50, s2);
+	// printf("17 - %.*s|\n\n", 50, s2);
+
+	// ft_printf("18 - %-*s|\n", 50, s2);
+	// printf("18 - %-*s|\n\n", 50, s2);
+
+	// ft_printf("19 - %*.s|\n", 50, s2);
+	// printf("19 - %*.s|\n\n", 50, s2);
+
+	// ft_printf("19 - |%*.0s|\n", 50, s2);
+	// printf("19 - |%*.0s|\n\n", 50, s2);
+
+	// ft_printf("19 - %*.2s|\n", 50, s2);
+	// printf("19 - %*.2s|\n\n", 50, s2);
+
+	// ft_printf("20 - %.*s|\n", 10, s2);
+	// printf("20 - %.*s|\n\n", 10, s2);
+
+/*
 	printf("\n\n----------CHARS----------\n\n");
 
 	

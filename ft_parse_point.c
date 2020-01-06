@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 09:57:58 by yarab             #+#    #+#             */
-/*   Updated: 2019/12/30 10:29:11 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/06 11:16:04 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_parse_point(char *str, va_list args, int *p, int *size)
 	{
 		if (str[k] == 's')
 		{
-			flags.precision = -1;
+			flags.precision = 0;
 			ft_minus_parsing(str + k, args, size, flags);
 		}
 		else
