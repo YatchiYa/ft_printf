@@ -6,11 +6,23 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 09:55:02 by yarab             #+#    #+#             */
-/*   Updated: 2019/12/30 10:28:51 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/06 14:23:14 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./ft_printf.h"
+
+void	ft_digits_parsing_id_extends_2(t_flags flags, int *size)
+{
+	ft_print_elem(flags.width, flags.precision, ' ', size);
+	ft_print_elem(flags.precision, 0, '0', size);
+}
+
+void	ft_minus_parse_id_extends_2(t_flags flags, int *size)
+{
+	ft_print_elem(flags.precision, 0, '0', size);
+	ft_print_elem(flags.width, flags.precision, ' ', size);
+}
 
 int	ft_digits_parsing_id_extends(t_flags flags, int number, int *size, int n)
 {

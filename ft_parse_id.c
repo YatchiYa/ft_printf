@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 10:10:27 by yarab             #+#    #+#             */
-/*   Updated: 2019/12/30 10:29:01 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/06 14:33:43 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,25 @@ void	ft_digits_parsing_id(char *str, va_list args, int *size, t_flags flags)
 
 	n = ft_str_length_format(str[0], args);
 	number = va_arg(args, int);
-	if (flags.blanks == 1 && flags.precision != -1)
-		number = ft_digits_parsing_id_extends(flags, number, size, n);
+	if (number == 0 && flags.precision != -1)
+		ft_digits_parsing_id_extends_2(flags, size);
 	else
 	{
-		if (number < 0)
-		{
-			ft_print_elem(flags.width, n + 1, ' ', size);
-			ft_putchar('-', size);
-			number = number * -1;
-		}
+		if (flags.blanks == 1 && flags.precision != 0)
+			number = ft_digits_parsing_id_extends(flags, number, size, n);
 		else
-			ft_print_elem(flags.width, n, ' ', size);
+		{
+			if (number < 0)
+			{
+				ft_print_elem(flags.width, n + 1, ' ', size);
+				ft_putchar('-', size);
+				number = number * -1;
+			}
+			else
+				ft_print_elem(flags.width, n, ' ', size);
+		}
+		ft_putnbr(number, size);
 	}
-	ft_putnbr(number, size);
 }
 
 void	ft_minus_parse_id(char *str, va_list args, int *size, t_flags flags)
@@ -50,21 +55,26 @@ void	ft_minus_parse_id(char *str, va_list args, int *size, t_flags flags)
 
 	n = ft_str_length_format(str[0], args);
 	number = va_arg(args, int);
-	if (flags.blanks == 1 && flags.precision != -1)
-		number = ft_minus_parse_id_extends(flags, number, size, n);
+	if (number == 0 && flags.precision != -1)
+		ft_minus_parse_id_extends_2(flags, size);
 	else
 	{
-		if (number < 0)
-		{
-			ft_putchar('-', size);
-			number = number * -1;
-			ft_putnbr(number, size);
-			ft_print_elem(flags.width, n + 1, ' ', size);
-		}
+		if (flags.blanks == 1 && flags.precision != -1)
+			number = ft_minus_parse_id_extends(flags, number, size, n);
 		else
 		{
-			ft_putnbr(number, size);
-			ft_print_elem(flags.width, n, ' ', size);
+			if (number < 0)
+			{
+				ft_putchar('-', size);
+				number = number * -1;
+				ft_putnbr(number, size);
+				ft_print_elem(flags.width, n + 1, ' ', size);
+			}
+			else
+			{
+				ft_putnbr(number, size);
+				ft_print_elem(flags.width, n, ' ', size);
+			}
 		}
 	}
 }

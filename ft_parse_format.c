@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 09:49:41 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/06 12:58:15 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/06 13:32:23 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,29 @@ int			ft_str_length_format(char c, va_list argx)
 	return (length);
 }
 
+void		ff(char *str, va_list args, int *p, int *size)
+{
+	int i;
+	int j;
+
+	i = 0;
+	j = 0;
+	while (str[j] == '0')
+	{
+		j++;
+		if (str[j] == '-')
+		{
+			ft_parse_minus(&str[j + 1], args, p, size);
+			break ;
+		}
+	}
+	if (str[j] == '-')
+		*p = *p + j;
+	else if (str[j] != '-')
+		if (str[i] == '0')
+			ft_parse_zero(&str[i + 1], args, p, size);
+}
+
 void		ft_parse_format(char *str, va_list args, int *p, int *size)
 {
 	int	i;
@@ -53,6 +76,5 @@ void		ft_parse_format(char *str, va_list args, int *p, int *size)
 	str[i] == '*' ? ft_parse_stars(&str[i], args, p, size) : 0;
 	str[i] == '.' ? ft_parse_point(&str[i], args, p, size) : 0;
 	str[i] > '0' && str[i] <= '9' ? ft_parse_digits(&str[i], args, p, size) : 0;
-	if (str[i] == '0')
-		ft_parse_zero(&str[i + 1], args, p, size);
+	ff(str, args, p, size);
 }

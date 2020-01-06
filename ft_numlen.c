@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 10:20:22 by yarab             #+#    #+#             */
-/*   Updated: 2019/12/30 10:28:15 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/06 13:12:44 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	ft_numlen(va_list args)
 	va_copy(tmp, args);
 	number = va_arg(tmp, int);
 	i = 0;
+	if (number == 0)
+		return (1);
 	while (number != 0)
 	{
 		i++;
@@ -38,6 +40,8 @@ int	ft_numlen_u(va_list args)
 	va_copy(tmp, args);
 	number = va_arg(tmp, unsigned int);
 	i = 0;
+	if (number == 0)
+		return (1);
 	while (number != 0)
 	{
 		i++;

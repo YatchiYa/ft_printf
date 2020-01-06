@@ -7,8 +7,21 @@ int main()
 	char s3[] = "     salut ca va bien    ";
 	char c = 'a';
 	char	*s;
+	int     x = 5;
 
 
+	ft_printf("8 - |%2.9p|\n", 123);
+	printf("8 - |%2.9p|\n\n", 123);
+
+
+	ft_printf("8 - |%12.9p|\n", 123);
+	printf("8 - |%12.9p|\n\n", 123);
+
+
+
+
+	// ft_printf("1 - %.0u\n", 0);
+	// printf("1 - %.0u\n\n", 0);
 
 /*
 	printf(" 1 - [%p] \n", NULL);
@@ -47,46 +60,57 @@ int main()
 
 	ft_printf("1 - |%*d| and |%*d|\n",5, 50, -5, 50);
 	printf("1 - [%*d| and |%*d|\n", 5 , 50, -5, 50);
-
-	printf("\n\n----------NUMBERS----------\n\n");
-
-	printf("1 - |%d|\n", 50);
-	ft_printf("1 - |%d|\n", 50);
-
-	ft_printf("2 - |%-.10d|\n", 50);
-	printf("2 - |%-.10d|\n", 50);
-
-	ft_printf("3 - |%0.10d|\n", 50);
-	printf("3 - |%0.10d|\n\n", 50);
-
-	ft_printf("4 - |%.010d|\n", 50);
-	printf("4 - |%.010d|\n\n", 50);
-
-	ft_printf("5 - |%-*d|\n", 10, 50);
-	printf("5 - |%-*d|\n\n", 10, 50);
-
-	ft_printf("6 - |%.*d|\n", 10, 50);
-	printf("6 - |%.*d|\n\n", 10, 50);
-
-	ft_printf("7 - |%*.d|\n", 10, 50);
-	printf("7 - |%*.d|\n\n", 10, 50);
-
-	ft_printf("8 - |%0*d|\n", 10, 50);
-	printf("9 - |%0*d|\n\n", 10, 50);
-
-	ft_printf("10 - |%-.010d|\n", 50);
-	printf("10 - |%-.010d|\n\n", 50);
-
-	ft_printf("11 - |%-.010d|\n", 50);
-	printf("11 - |%-.010d|\n\n", 50);
-
-	ft_printf("12 - |%*.0d|\n", 10, 50);
-	printf("12 - |%*.0d|\n\n", 10, 50);
-
-	ft_printf("13 - |%0*.d|\n", 10, 50);
-	printf("13 - |%0*.d|\n\n", 10, 50);
-
 */
+	// printf("\n\n----------NUMBERS----------\n\n");
+
+
+	// printf("1 - |%.0d|\n", 0);
+	// ft_printf("1 - |%.0d|\n", 0);
+
+	// printf("1 - |%.d|\n", 0);
+	// ft_printf("1 - |%.d|\n", 0);
+
+	// printf("1 - |%5.d|\n", 0);
+	// ft_printf("1 - |%5.d|\n", 0);
+
+
+	// printf("1 - |%d|\n", 50);
+	// ft_printf("1 - |%d|\n", 50);
+
+	// ft_printf("2 - |%-.10d|\n", 50);
+	// printf("2 - |%-.10d|\n", 50);
+
+	// ft_printf("3 - |%0.10d|\n", 50);
+	// printf("3 - |%0.10d|\n\n", 50);
+
+	// ft_printf("4 - |%.010d|\n", 50);
+	// printf("4 - |%.010d|\n\n", 50);
+
+	// ft_printf("5 - |%-*d|\n", 10, 50);
+	// printf("5 - |%-*d|\n\n", 10, 50);
+
+	// ft_printf("6 - |%.*d|\n", 10, 50);
+	// printf("6 - |%.*d|\n\n", 10, 50);
+
+	// ft_printf("7 - |%*.d|\n", 10, 50);
+	// printf("7 - |%*.d|\n\n", 10, 50);
+
+	// ft_printf("8 - |%0*d|\n", 10, 50);
+	// printf("9 - |%0*d|\n\n", 10, 50);
+
+	// ft_printf("10 - |%-.010d|\n", 50);
+	// printf("10 - |%-.010d|\n\n", 50);
+
+	// ft_printf("11 - |%-.010d|\n", 50);
+	// printf("11 - |%-.010d|\n\n", 50);
+
+	// ft_printf("12 - |%*.0d|\n", 10, 50);
+	// printf("12 - |%*.0d|\n\n", 10, 50);
+
+	// ft_printf("13 - |%0*.d|\n", 10, 50);
+	// printf("13 - |%0*.d|\n\n", 10, 50);
+
+/*
 
 
 	// ft_printf("112 - |%7s|\n", s2);
@@ -177,7 +201,7 @@ int main()
 
 	// ft_printf("20 - %.*s|\n", 10, s2);
 	// printf("20 - %.*s|\n\n", 10, s2);
-/*
+
 	printf("\n\n----------CHARS----------\n\n");
 
 	
@@ -314,11 +338,11 @@ int main()
 */
 	// printf("\n\n----------STRINGS----------\n\n");
 
-	ft_printf("0 - |%03s|\n\n", s2);
-	printf("0 - |%03s|\n\n", s2);
+	// ft_printf("0 - |%0-0s|\n\n", s2);
+	// printf("0 - |%0-0s|\n\n", s2);
 
-	ft_printf("0 - |%-8s|\n\n", s2);
-	printf("0 - |%-8s|\n\n", s2);
+	// ft_printf("0 - |%0-8s|\n\n", s2);
+	// printf("0 - |%0-8s|\n\n", s2);
 
 	// ft_printf("0 - |%09s|\n", s2);
 	// printf("0 - |%09s|\n\n", s2);
