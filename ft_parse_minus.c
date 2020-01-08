@@ -6,11 +6,81 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 09:57:02 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/08 11:02:42 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/08 17:07:40 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./ft_printf.h"
+
+void	ft_minus_parse_id_extends_2(t_flags flags, int *size, int number)
+{
+	if (number == 0 && flags.precision < 0)
+	{
+		ft_putchar('0', size);
+		ft_print_elem(flags.width, 1, ' ', size);
+	}
+	else if (flags.precision == 0)
+		ft_print_elem(flags.width, 0, ' ', size);
+	else
+	{
+		ft_print_elem(flags.precision, 1, '0', size);
+		ft_putchar('0', size);
+		ft_print_elem(flags.width, flags.precision, ' ', size);
+	}
+}
+
+int	ft_minus_parse_id_extends(t_flags flags, int number, int *size, int n)
+{
+	if (number < 0)
+	{
+		ft_putchar('-', size);
+		number = number * -1;
+		ft_print_elem(flags.precision, n, '0', size);
+		ft_putnbr(number, size);
+		ft_print_elem(flags.width,
+				flags.precision > n ? flags.precision + 1 : n + 1,
+				' ', size);
+	}
+	else
+	{
+		ft_print_elem(flags.precision, n, '0', size);
+		ft_putnbr(number, size);
+		ft_print_elem(flags.width,
+				flags.precision > n ? flags.precision : n, ' ', size);
+	}
+	return (number);
+}
+
+void	ft_minus_parse_id(char *str, va_list args, int *size, t_flags flags)
+{
+	int	number;
+	int	n;
+
+	n = ft_str_length_format(str[0], args);
+	number = va_arg(args, int);
+	if (number == 0)
+		ft_minus_parse_id_extends_2(flags, size, number);
+	else
+	{
+		if (flags.blanks == 1 && flags.precision != -1)
+			number = ft_minus_parse_id_extends(flags, number, size, n);
+		else
+		{
+			if (number < 0)
+			{
+				number != INT_MIN ? ft_putchar('-', size) : 0;
+				number = number * -1;
+				ft_putnbr(number, size);
+				ft_print_elem(flags.width, n + 1, ' ', size);
+			}
+			else
+			{
+				ft_putnbr(number, size);
+				ft_print_elem(flags.width, n, ' ', size);
+			}
+		}
+	}
+}
 
 void	ft_minus_parsing(char *str, va_list args, int *size, t_flags flags)
 {
@@ -49,6 +119,8 @@ void	ft_parse_minus(char *str, va_list args, int *p, int *size)
 		flags.precision = 0;
 		k += ft_fill_precision(args, &str[k + 1], &flags) + 1;
 	}
+	if (flags.width < 0 && flags.width != -1)
+		flags.width *= -1;
 	*p = *p + k + 1;
 	ft_minus_parsing(str + k, args, size, flags);
 }

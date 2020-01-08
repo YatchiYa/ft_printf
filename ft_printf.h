@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 10:35:15 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/08 10:58:04 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/08 15:58:33 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void			ft_zero_parsing_id(char *str,
 int				ft_digits_parsing_id_extends(t_flags flags,
 		int number, int *size, int n);
 void			ft_digits_parsing_id_extends_2(t_flags flags, int *size);
-void			ft_minus_parse_id_extends_2(t_flags flags, int *size);
+void			ft_minus_parse_id_extends_2(t_flags flags, int *size, int number);
 int				ft_minus_parse_id_extends(t_flags flags,
 		int number, int *size, int n);
 
