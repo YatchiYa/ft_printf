@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 10:10:27 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/06 14:33:43 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/08 11:00:10 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	ft_minus_parse_id(char *str, va_list args, int *size, t_flags flags)
 		{
 			if (number < 0)
 			{
-				ft_putchar('-', size);
+				number != INT_MIN ? ft_putchar('-', size) : 0;
 				number = number * -1;
 				ft_putnbr(number, size);
 				ft_print_elem(flags.width, n + 1, ' ', size);

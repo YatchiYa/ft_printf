@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 10:03:26 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/06 12:05:32 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/08 10:53:12 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,10 @@ void	ft_minus_parse_str(va_list args, int *size, t_flags flags)
 	t = va_arg(args, char*);
 	s = (t == NULL) ? ft_strdup("(null)") : ft_strdup(t);
 	i = 0;
+	if (flags.width < 0 && flags.width != -1)
+		flags.width *= -1;
+	if (flags.precision < 0 && flags.precision != -1)
+		flags.precision = -1;
 	if (flags.precision != -1)
 	{
 		while (s[i] && i < flags.precision)

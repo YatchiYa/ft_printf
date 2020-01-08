@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 09:49:41 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/06 13:32:23 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/08 10:15:54 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,28 @@ void		ff(char *str, va_list args, int *p, int *size)
 }
 
 void		ft_parse_format(char *str, va_list args, int *p, int *size)
+{
+	int i;
+
+	i = 0;
+	while (str[i] &&
+		(ft_is_flags(str[i]) ||
+			(str[i] >= '0' && str[i] <= '9')))
+	{
+		i++;
+	}
+	if (ft_is_type(str[i]) == 1)
+	{
+		ft_parse_formatx(str, args, p, size);
+	}
+	else
+	{
+		*p = *p + 1;
+		ft_putchar(str[0], size);
+	}
+}
+
+void		ft_parse_formatx(char *str, va_list args, int *p, int *size)
 {
 	int	i;
 

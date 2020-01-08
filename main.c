@@ -9,13 +9,23 @@ int main()
 	char	*s;
 	int     x = 5;
 
+	printf("|%--5d|\n", 42);
+	printf("|%-5d|\n", 42);
+	printf("|%5d|\n", 42);
 
-	ft_printf("8 - |%2.9p|\n", 123);
-	printf("8 - |%2.9p|\n\n", 123);
+	// printf("%%-d 42 == %-d \n", INT_MIN);
+	// ft_printf("%%-d 42 == %-d", INT_MIN);
+
+	// ft_printf("8 - %5 \n");
+	// printf("8 - %5 \n\n");
 
 
-	ft_printf("8 - |%12.9p|\n", 123);
-	printf("8 - |%12.9p|\n\n", 123);
+	// ft_printf("8 - |%2.9p|\n", 123);
+	// printf("8 - |%2.9p|\n\n", 123);
+
+
+	// ft_printf("8 - |%12.9p|\n", 123);
+	// printf("8 - |%12.9p|\n\n", 123);
 
 
 
