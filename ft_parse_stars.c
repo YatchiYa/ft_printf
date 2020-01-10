@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 09:59:27 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/10 11:56:58 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/10 12:07:54 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,7 @@ void	ft_parse_stars(char *str, va_list args, int *p, int *size)
 	if (flags.precision < 0 && flags.precision != -1)
 		if (str[k] == 's')
 			flags.precision = -1;
-	if (flags.width < 0 && flags.width != -1)
+	if (flags.width < 0 && flags.is_width == '1')
 	{
 		flags.width = flags.width * -1;
 		ft_minus_parsing(str + k, args, size, flags);

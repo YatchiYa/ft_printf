@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 10:08:50 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/08 15:32:26 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/10 13:29:29 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int		ft_parse_int_tmp(va_list args)
 	int		number;
 
 	va_copy(argx, args);
-	number = va_arg(args, int);
+	number = va_arg(argx, int);
 	return (number);
 }
 
