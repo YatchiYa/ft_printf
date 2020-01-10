@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 09:57:58 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/08 16:49:43 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/10 11:57:22 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,6 @@ void	ft_parse_point(char *str, va_list args, int *p, int *size)
 	inti_struct(&flags);
 	k = 0;
 	flags.width = 0;
-	flags.precision = 0;
 	k++;
 	k += ft_fill_precision(args, &str[k], &flags);
 	*p = *p + k;

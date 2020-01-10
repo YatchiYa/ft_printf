@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 10:35:15 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/08 15:58:33 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/10 11:55:39 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ typedef struct	s_flags
 	int	width;
 	int	precision;
 	int	blanks;
+	char is_width;
+	char is_prec;
 }				t_flags;
 
 void			ft_parse_int(va_list args, int *i);
