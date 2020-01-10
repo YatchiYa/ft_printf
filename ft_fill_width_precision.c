@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 09:17:29 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/10 13:20:31 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/10 16:46:34 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int	ft_fill_width(va_list args, char *str, t_flags *flags)
 			}
 			flags->width = ft_atoi(tab);
 		}
+		flags->is_width = '1';
 	}
 	free(tab);
 	return (i);
@@ -64,6 +65,7 @@ int	ft_fill_precision(va_list args, char *str, t_flags *flags)
 			flags->precision = ft_atoi(tab);
 		}
 		flags->blanks = 1;
+		flags->is_prec = '1';
 	}
 	free(tab);
 	return (i);

@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 09:57:58 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/10 11:57:22 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/10 14:50:55 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,8 +108,10 @@ void	ft_parse_point(char *str, va_list args, int *p, int *size)
 	flags.width = 0;
 	k++;
 	k += ft_fill_precision(args, &str[k], &flags);
+	flags.is_prec = '1';
 	*p = *p + k;
-	if (flags.precision < 0)
+	ft_point_parsing(str + k, args, size, flags);
+	/*if (flags.precision < 0)
 	{
 		if (str[k] == 's')
 		{
@@ -122,4 +124,5 @@ void	ft_parse_point(char *str, va_list args, int *p, int *size)
 	}
 	else
 		ft_point_parsing(str + k, args, size, flags);
+	*/
 }

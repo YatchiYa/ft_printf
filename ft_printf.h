@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 10:35:15 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/10 11:55:39 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/10 15:14:40 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,5 +148,6 @@ void			ft_putadr(unsigned long n, int *p);
 void			ft_putadr_maj(unsigned long n, int *p);
 int				ft_putadr_len(va_list args);
 int				ft_hexalen(va_list args);
+int		        ft_strcmp(const char *s1, const char *s2);
 
 #endif

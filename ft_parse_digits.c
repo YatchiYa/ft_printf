@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 09:41:03 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/06 11:52:40 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/10 14:53:07 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,12 @@ void	ft_parse_digits(char *str, va_list args, int *p, int *size)
 	inti_struct(&flags);
 	k = 0;
 	k += ft_fill_width(args, &str[k], &flags);
+	flags.is_width = '1';
 	if (str[k] == '.')
 	{
 		flags.precision = 0;
 		k += ft_fill_precision(args, &str[k + 1], &flags) + 1;
+		flags.is_prec = '1';
 	}
 	*p = *p + k;
 	ft_digits_parsing(str + k, args, size, flags);
