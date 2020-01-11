@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 10:35:15 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/11 15:10:52 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/11 17:39:41 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@
 
 typedef struct	s_flags
 {
-	int	width;
-	int	precision;
-	int	blanks;
-	char is_width;
-	char is_prec;
+	int		width;
+	int		precision;
+	int		blanks;
+	char	is_width;
+	char	is_prec;
 }				t_flags;
 
 void			ft_parse_int(va_list args, int *i);
@@ -148,6 +148,6 @@ void			ft_putadr(unsigned long n, int *p);
 void			ft_putadr_maj(unsigned long n, int *p);
 int				ft_putadr_len(va_list args);
 int				ft_hexalen(va_list args);
-int		        ft_strcmp(const char *s1, const char *s2);
+int				ft_strcmp(const char *s1, const char *s2);
 
 #endif
