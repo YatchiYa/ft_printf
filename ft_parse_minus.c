@@ -6,15 +6,15 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 09:57:02 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/10 16:47:05 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/11 15:11:30 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./ft_printf.h"
 
-void	ft_minus_parse_id_extends_2(t_flags flags, int *size, int number)
+void	ft_minus_parse_id_extends_2(t_flags flags, int *size)
 {
-	if (number == 0 && flags.precision < 0)
+	if (flags.precision < 0)
 	{
 		ft_putchar('0', size);
 		ft_print_elem(flags.width, 1, ' ', size);
@@ -59,10 +59,10 @@ void	ft_minus_parse_id(char *str, va_list args, int *size, t_flags flags)
 	n = ft_str_length_format(str[0], args);
 	number = va_arg(args, int);
 	if (number == 0)
-		ft_minus_parse_id_extends_2(flags, size, number);
+		ft_minus_parse_id_extends_2(flags, size);
 	else
 	{
-		if (flags.blanks == 1 && flags.precision != -1)
+		if (flags.is_prec == '1')
 			number = ft_minus_parse_id_extends(flags, number, size, n);
 		else
 		{
@@ -122,7 +122,7 @@ void	ft_parse_minus(char *str, va_list args, int *p, int *size)
 		k += ft_fill_precision(args, &str[k + 1], &flags) + 1;
 		flags.is_prec = '1';
 	}
-	if (flags.width < 0 && flags.width != -1)
+	if (flags.width < 0 && flags.is_width == '1')
 		flags.width *= -1;
 	*p = *p + k + 1;
 	ft_minus_parsing(str + k, args, size, flags);

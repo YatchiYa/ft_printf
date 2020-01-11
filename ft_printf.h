@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 10:35:15 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/10 15:14:40 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/11 15:10:52 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # include <stdarg.h>
 # include <stdint.h>
 # include <inttypes.h>
-#include "limits.h"
+# include "limits.h"
 
 # define HEXA_BASE "0123456789abcdef"
 # define HEXA_BASE_M "0123456789ABCDEF"
@@ -53,7 +53,7 @@ void			ft_zero_parsing_id(char *str,
 int				ft_digits_parsing_id_extends(t_flags flags,
 		int number, int *size, int n);
 void			ft_digits_parsing_id_extends_2(t_flags flags, int *size);
-void			ft_minus_parse_id_extends_2(t_flags flags, int *size, int number);
+void			ft_minus_parse_id_extends_2(t_flags flags, int *size);
 int				ft_minus_parse_id_extends(t_flags flags,
 		int number, int *size, int n);
 

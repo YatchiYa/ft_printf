@@ -2,66 +2,114 @@
 
 int	main()
 {
+	printf("[%0*.0d] \n", -1, 0);
+	ft_printf("[%0*.0d] \n", -1, 0);
 
 
-	printf(" ---------------- str -------------- \n \n");
+	printf("[%-*.0d] \n", -1, 0);
+	ft_printf("[%-*.0d] \n", -1, 0);
 
-	printf("[%-*.*s] \n", 8, -7, "SVZ04PE5lfghOLs");
-	ft_printf("[%-*.*s] \n", 8, -7, "SVZ04PE5lfghOLs");
+	printf("[%-.0d | %*.*d] \n", -2147483647, 2, -10, 0);
+	ft_printf("[%-.0d | %*.*d] \n", -2147483647, 2, -10, 0);
+
+	printf("[%04.*d] \n", -8, 0);
+	ft_printf("[%04.*d] \n", -8, 0);
+
+
+	printf("[%20.*d] \n", -8, 0);
+	ft_printf("[%20.*d] \n", -8, 0);
+
+
+	printf("[%011.*d] \n", -10, 2147483647);
+	ft_printf("[%011.*d] \n", -10, 2147483647);
+
+
+	printf("[%09.0d] \n", 0);
+	ft_printf("[%09.0d] \n", 0);
+
+	printf("[%-.4d | %0.*d] \n", -2147483647, -4, 0);
+	ft_printf("[%-.4d | %0.*d] \n", -2147483647, -4, 0);
+
+
+	printf("[%0.0d] \n", 508334181);
+	ft_printf("[%0.0d] \n", 508334181);
+
+	printf("[%0.3d] \n", 0);
+	ft_printf("[%0.3d] \n", 0);
+
+
+	printf("[%0.1d] \n", -2147483647);
+	ft_printf("[%0.1d] \n", -2147483647);
+
+	printf("[%014.*d | %-8d] \n", -9, -2147483647, -2147483647);
+	ft_printf("[%014.*d | %-8d] \n", -9, -2147483647, -2147483647);
+
+	printf("[%12d | %-.4d | %0d] \n", 913735481, -2147483647, 0);
+	ft_printf("[%12d | %-.4d | %0d] \n", 913735481, -2147483647, 0);
+
+
+	printf("[%017.1d | %-d%.2d | %.1d | %3.4d] \n", 0, 0, -1223602863, 676074791, 0);
+	ft_printf("[%017.1d | %-d%.2d | %.1d | %3.4d] \n", 0, 0, -1223602863, 676074791, 0);
+
+
+	// printf(" ---------------- str -------------- \n \n");
+
+	// printf("[%-*.*s] \n", 8, -7, "SVZ04PE5lfghOLs");
+	// ft_printf("[%-*.*s] \n", 8, -7, "SVZ04PE5lfghOLs");
 	
-	printf("[%s | %-*s]\n", "wAjwFpzAQw2r3xJvPq3NgvBf2vW", -7, NULL);
-	ft_printf("[%s | %-*s]\n", "wAjwFpzAQw2r3xJvPq3NgvBf2vW", -7, NULL);
+	// printf("[%s | %-*s]\n", "wAjwFpzAQw2r3xJvPq3NgvBf2vW", -7, NULL);
+	// ft_printf("[%s | %-*s]\n", "wAjwFpzAQw2r3xJvPq3NgvBf2vW", -7, NULL);
 
-	printf("[%-s] \n", "");
-	ft_printf("[%-s] \n", "");
+	// printf("[%-s] \n", "");
+	// ft_printf("[%-s] \n", "");
 	
-	printf("[%-1s] \n","");
-	ft_printf("[%-1s] \n","");
+	// // printf("[%-1s] \n","");
+	// // ft_printf("[%-1s] \n","");
 
-	printf("[%-10s] \n","");
-	ft_printf("[%-10s] \n","");
+	// printf("[%-10s] \n","");
+	// ft_printf("[%-10s] \n","");
 
-	printf("[%-.5s | %19.4s | %-1s | %-15.4s] \n", NULL, "", "", NULL);
-	ft_printf("[%-.5s | %19.4s | %-1s | %-15.4s] \n", NULL, "", "", NULL);
+	// printf("[%-.5s | %19.4s | %-1s | %-15.4s] \n", NULL, "", "", NULL);
+	// ft_printf("[%-.5s | %19.4s | %-1s | %-15.4s] \n", NULL, "", "", NULL);
 
-	printf("[%*.3s]\n", -10, "");
-	ft_printf("[%*.3s]\n", -10, "");
+	// printf("[%*.3s]\n", -10, "");
+	// ft_printf("[%*.3s]\n", -10, "");
 
-	printf("[%-10.*s] \n", -1, NULL);
-	ft_printf("[%-10.*s] \n", -1, NULL);
+	// printf("[%-10.*s] \n", -1, NULL);
+	// ft_printf("[%-10.*s] \n", -1, NULL);
 
-	printf("[%-*.0s]\n", -1, NULL);
-	ft_printf("[%-*.0s]\n", -1, NULL);
-
-
-	printf("[%.*s]\n", -3, "iKXjMi");
-	ft_printf("[%.*s]\n", -3, "iKXjMi");
-
-	printf("[%.*s] \n", -8, NULL);
-	ft_printf("[%.*s] \n", -8, NULL);
-
-	printf("[%2.*s] \n", -10, "");
-	ft_printf("[%2.*s] \n", -10, "");
+	// printf("[%-*.0s]\n", -1, NULL);
+	// ft_printf("[%-*.0s]\n", -1, NULL);
 
 
-	printf("[%.5sM0J%9.*sn5]\n", "", -5, NULL);
-	ft_printf("[%.5sM0J%9.*sn5]\n", "", -5, NULL);
+	// printf("[%.*s]\n", -3, "iKXjMi");
+	// ft_printf("[%.*s]\n", -3, "iKXjMi");
 
-	printf("[%-19.*s] \n", 7, NULL);
-	ft_printf("[%-19.*s] \n", 7, NULL);
+	// printf("[%.*s] \n", -8, NULL);
+	// ft_printf("[%.*s] \n", -8, NULL);
 
-	printf("[%5.0s] \n" , NULL);
-	ft_printf("[%5.0s] \n",NULL);
-
-	printf("[%.3s | JuUq3%.0snwPb%-s] \n", NULL, "hE6YPj", NULL);
-	ft_printf("[%.3s | JuUq3%.0snwPb%-s] \n", NULL, "hE6YPj", NULL);
+	// printf("[%2.*s] \n", -10, "");
+	// ft_printf("[%2.*s] \n", -10, "");
 
 
-	printf("[%s%20.*srRl%-4sGqjUYYkh%s%10.3sbkp] \n", "", -10, NULL, "", "", "");
-	ft_printf("[%s%20.*srRl%-4sGqjUYYkh%s%10.3sbkp] \n", "", -10, NULL, "", "", "");
+	// printf("[%.5sM0J%9.*sn5]\n", "", -5, NULL);
+	// ft_printf("[%.5sM0J%9.*sn5]\n", "", -5, NULL);
 
-	printf("[%-2s | %18.*s] \n", NULL, -4, NULL);
-	ft_printf("[%-2s | %18.*s] \n", NULL, -4, NULL);
+	// printf("[%-19.*s] \n", 7, NULL);
+	// ft_printf("[%-19.*s] \n", 7, NULL);
+
+	// printf("[%5.0s] \n" , NULL);
+	// ft_printf("[%5.0s] \n",NULL);
+
+	// printf("[%.3s | JuUq3%.0snwPb%-s] \n", NULL, "hE6YPj", NULL);
+	// ft_printf("[%.3s | JuUq3%.0snwPb%-s] \n", NULL, "hE6YPj", NULL);
+
+
+	// printf("[%s%20.*srRl%-4sGqjUYYkh%s%10.3sbkp] \n", "", -10, NULL, "", "", "");
+	// ft_printf("[%s%20.*srRl%-4sGqjUYYkh%s%10.3sbkp] \n", "", -10, NULL, "", "", "");
+
+	// printf("[%-2s | %18.*s] \n", NULL, -4, NULL);
+	// ft_printf("[%-2s | %18.*s] \n", NULL, -4, NULL);
 
 
 
