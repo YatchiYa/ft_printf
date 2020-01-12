@@ -2,8 +2,8 @@
 
 int	main()
 {
-	// printf("|%.s|\n","hello");
-	// ft_printf("|%.s|\n","hello");
+//	 printf("|%.s|\n","hello");
+//	 ft_printf("|%.s|\n","hello");
 
 	// printf("|%.0s|\n","nm");
 	// ft_printf("|%.0s|\n","nm");
