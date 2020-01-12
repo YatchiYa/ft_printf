@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 09:57:02 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/11 15:11:30 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/12 14:34:00 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,26 +29,20 @@ void	ft_minus_parse_id_extends_2(t_flags flags, int *size)
 	}
 }
 
-int	ft_minus_parse_id_extends(t_flags flags, int number, int *size, int n)
+void	xxff(t_flags flags, int number, int *size, int n)
 {
 	if (number < 0)
 	{
-		ft_putchar('-', size);
+		number != INT_MIN ? ft_putchar('-', size) : 0;
 		number = number * -1;
-		ft_print_elem(flags.precision, n, '0', size);
 		ft_putnbr(number, size);
-		ft_print_elem(flags.width,
-				flags.precision > n ? flags.precision + 1 : n + 1,
-				' ', size);
+		ft_print_elem(flags.width, n + 1, ' ', size);
 	}
 	else
 	{
-		ft_print_elem(flags.precision, n, '0', size);
 		ft_putnbr(number, size);
-		ft_print_elem(flags.width,
-				flags.precision > n ? flags.precision : n, ' ', size);
+		ft_print_elem(flags.width, n, ' ', size);
 	}
-	return (number);
 }
 
 void	ft_minus_parse_id(char *str, va_list args, int *size, t_flags flags)
@@ -65,20 +59,7 @@ void	ft_minus_parse_id(char *str, va_list args, int *size, t_flags flags)
 		if (flags.is_prec == '1')
 			number = ft_minus_parse_id_extends(flags, number, size, n);
 		else
-		{
-			if (number < 0)
-			{
-				number != INT_MIN ? ft_putchar('-', size) : 0;
-				number = number * -1;
-				ft_putnbr(number, size);
-				ft_print_elem(flags.width, n + 1, ' ', size);
-			}
-			else
-			{
-				ft_putnbr(number, size);
-				ft_print_elem(flags.width, n, ' ', size);
-			}
-		}
+			xxff(flags, number, size, n);
 	}
 }
 

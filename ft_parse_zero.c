@@ -6,13 +6,13 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 10:06:10 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/11 15:13:13 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/12 14:42:11 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./ft_printf.h"
 
-void    ft_zero_parsing_id_extends(t_flags flags, int number, int *size, int n)
+void	ft_zero_parsing_id_extends(t_flags flags, int number, int *size, int n)
 {
 	if (number < 0)
 	{
@@ -32,6 +32,28 @@ void    ft_zero_parsing_id_extends(t_flags flags, int number, int *size, int n)
 	ft_putnbr(number, size);
 }
 
+void	zzero(t_flags flags, int number, int *size, int n)
+{
+	if (flags.is_prec == '1' && flags.precision >= 0)
+	{
+		number = ft_digits_parsing_id_extends(flags, number, size, n);
+		ft_putnbr(number, size);
+	}
+	else if (flags.is_prec == '1' && flags.precision < 0)
+		ft_zero_parsing_id_extends(flags, number, size, n);
+	else if (flags.is_prec == '0')
+	{
+		if (number < 0)
+		{
+			ft_putchar('-', size);
+			number = number * -1;
+			ft_print_elem(flags.width, n + 1, '0', size);
+		}
+		else
+			ft_print_elem(flags.width, n, '0', size);
+		ft_putnbr(number, size);
+	}
+}
 
 void	ft_zero_parsing_id(char *str, va_list args, int *size, t_flags flags)
 {
@@ -42,33 +64,14 @@ void	ft_zero_parsing_id(char *str, va_list args, int *size, t_flags flags)
 	number = va_arg(args, int);
 	if (number == 0 && flags.is_prec == '1')
 	{
-		ft_print_elem(flags.width, flags.precision < 0 ? 1 : flags.precision, 
+		ft_print_elem(flags.width, flags.precision < 0 ?
+			1 : flags.precision,
 			flags.precision < 0 ? '0' : ' ', size);
 		ft_print_elem(flags.precision, 1, '0', size);
 		flags.precision != 0 ? ft_putchar('0', size) : 0;
 	}
 	else
-	{
-		if (flags.is_prec == '1' && flags.precision >= 0)
-		{
-			number = ft_digits_parsing_id_extends(flags, number, size, n);
-			ft_putnbr(number, size);
-		}
-		else if (flags.is_prec == '1' && flags.precision < 0)
-			ft_zero_parsing_id_extends(flags, number, size, n);
-		else if (flags.is_prec == '0')
-		{
-			if (number < 0)
-			{
-				ft_putchar('-', size);
-				number = number * -1;
-				ft_print_elem(flags.width, n + 1, '0', size);
-			}
-			else
-				ft_print_elem(flags.width, n, '0', size);
-			ft_putnbr(number, size);
-		}
-	}
+		zzero(flags, number, size, n);
 }
 
 void	ft_zero_parsing(char *str, va_list args, int *size, t_flags flags)

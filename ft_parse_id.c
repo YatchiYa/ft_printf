@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 10:10:27 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/11 14:59:08 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/12 14:18:02 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	ft_digits_parsing_id(char *str, va_list args, int *size, t_flags flags)
 		ft_digits_parsing_id_extends_2(flags, size);
 	else
 	{
-		if (flags.blanks == 1 && flags.precision != 0)
+		if (flags.is_prec == '1' && flags.precision != 0)
 			number = ft_digits_parsing_id_extends(flags, number, size, n);
 		else
 		{

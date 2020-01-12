@@ -6,7 +6,7 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 09:33:54 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/06 15:51:10 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/12 13:54:20 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@ void	ft_digits_parsing_adr(char *str, va_list args, int *size, t_flags flags)
 	n = ft_str_length_format(str[0], args);
 	adr = va_arg(args, void*);
 	number = (unsigned long)(adr);
-	if (number == 0 && flags.precision != -1)
+	if (number == 0 && flags.is_prec == '1')
 		ff_xx(size, flags);
 	else
 	{
-		if (flags.blanks == 1 && flags.precision != -1)
+		if (flags.is_prec == '1')
 		{
 			ft_print_elem(flags.width, flags.precision > n ?
 			flags.precision : n, ' ', size);
@@ -63,7 +63,7 @@ void	ft_minus_parse_adr(char *str, va_list args, int *size, t_flags flags)
 	n = ft_str_length_format(str[0], args);
 	adr = va_arg(args, void*);
 	number = (unsigned long)(adr);
-	if (flags.blanks == 1 && flags.precision != -1)
+	if (flags.is_prec == '1')
 	{
 		ft_print_elem(flags.precision, n, '0', size);
 		ft_putstr("0x", size);
@@ -89,7 +89,7 @@ void	ft_zero_parsing_adr(char *str, va_list args, int *size, t_flags flags)
 	adr = va_arg(args, void*);
 	number = (unsigned long)(adr);
 	ft_putstr("0x", size);
-	if (flags.precision != -1)
+	if (flags.is_prec == '1')
 	{
 		ft_print_elem(flags.width,
 				flags.precision > n ? flags.precision : n, ' ', size);

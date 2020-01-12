@@ -6,18 +6,26 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 10:03:55 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/10 12:05:41 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/12 15:09:04 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./ft_printf.h"
 
-void	ft_parse_uint(va_list args, int *p)
+void	uumm(t_flags flags, int *size, int number, int n)
 {
-	unsigned int	number;
-
-	number = va_arg(args, unsigned int);
-	ft_putnbr_u(number, p);
+	if (flags.is_prec == '1')
+	{
+		ft_print_elem(flags.precision, n, '0', size);
+		ft_putnbr_u(number, size);
+		ft_print_elem(flags.width,
+				flags.precision > n ? flags.precision : n, ' ', size);
+	}
+	else
+	{
+		ft_putnbr_u(number, size);
+		ft_print_elem(flags.width, n, ' ', size);
+	}
 }
 
 void	ft_minus_parse_u(char *str, va_list args, int *size, t_flags flags)
@@ -35,20 +43,29 @@ void	ft_minus_parse_u(char *str, va_list args, int *size, t_flags flags)
 		ft_print_elem(flags.width, flags.precision, ' ', size);
 	}
 	else
+		uumm(flags, size, number, n);
+}
+
+void	uuff(t_flags flags, int *size, int choice)
+{
+	if (flags.is_width == '1' && flags.width < 0)
+		flags.width *= -1;
+	if (flags.precision < 0)
 	{
-		if (flags.blanks == 1 && flags.precision != -1)
-		{
-			ft_print_elem(flags.precision, n, '0', size);
-			ft_putnbr_u(number, size);
-			ft_print_elem(flags.width,
-					flags.precision > n ? flags.precision : n, ' ', size);
-		}
-		else
-		{
-			ft_putnbr_u(number, size);
-			ft_print_elem(flags.width, n, ' ', size);
-		}
+		if (choice == 1)
+			ft_print_elem(flags.width, 1, '0', size);
+		else if (choice == 2)
+			ft_print_elem(flags.width, 1, ' ', size);
+		ft_putchar('0', size);
 	}
+	else if (flags.precision > 0)
+	{
+		ft_print_elem(flags.width, flags.precision, ' ', size);
+		ft_print_elem(flags.precision, 1, '0', size);
+		ft_putchar('0', size);
+	}
+	else
+		ft_print_elem(flags.width, 0, ' ', size);
 }
 
 void	ft_zero_parsing_u(char *str, va_list args, int *size, t_flags flags)
@@ -59,23 +76,7 @@ void	ft_zero_parsing_u(char *str, va_list args, int *size, t_flags flags)
 	n = ft_str_length_format(str[0], args);
 	number = va_arg(args, unsigned int);
 	if (number == 0)
-	{
-		if (flags.is_width == '1' && flags.width < 0)
-			flags.width *= -1;
-		if (flags.precision < 0)
-		{
-			ft_print_elem(flags.width, 1, '0', size);
-			ft_putchar('0', size);
-		}
-		else if (flags.precision > 0)
-		{
-			ft_print_elem(flags.width, flags.precision, ' ', size);
-			ft_print_elem(flags.precision, 1, '0', size);
-			ft_putchar('0', size);
-		}
-		else
-			ft_print_elem(flags.width, 0, ' ', size);
-	}
+		uuff(flags, size, 1);
 	else
 	{
 		if (flags.precision < 0)
@@ -100,26 +101,10 @@ void	ft_digits_parsing_u(char *str, va_list args, int *size, t_flags flags)
 	n = ft_str_length_format(str[0], args);
 	number = va_arg(args, unsigned int);
 	if (number == 0)
-	{
-		if (flags.is_width == '1' && flags.width < 0)
-			flags.width *= -1;
-		if (flags.precision < 0)
-		{
-			ft_print_elem(flags.width, 1, ' ', size);
-			ft_putchar('0', size);
-		}
-		else if (flags.precision == 0)
-			ft_print_elem(flags.width, 0, ' ', size);
-		else
-		{
-			ft_print_elem(flags.width, flags.precision, ' ', size);
-			ft_print_elem(flags.precision, 1, '0', size);
-			ft_putchar('0', size);
-		}
-	}
+		uuff(flags, size, 2);
 	else
 	{
-		if (flags.blanks == 1 && flags.precision != -1)
+		if (flags.is_prec == '1')
 		{
 			ft_print_elem(flags.width, flags.precision > n ?
 					flags.precision : n, ' ', size);

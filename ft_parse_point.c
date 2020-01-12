@@ -6,11 +6,28 @@
 /*   By: yarab <yarab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 09:57:58 by yarab             #+#    #+#             */
-/*   Updated: 2020/01/11 15:49:12 by yarab            ###   ########.fr       */
+/*   Updated: 2020/01/12 14:36:51 by yarab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./ft_printf.h"
+
+void	ppff(char *s, t_flags flags, int *size)
+{
+	int i;
+
+	i = 0;
+	ft_print_elem(flags.width > ft_strlen(s) ?
+		flags.width : 0, ft_strlen(s), ' ', size);
+	if (ft_strcmp(s, "(null)") == 0)
+		ft_putstr("(null)", size);
+	else
+		while (s[i])
+		{
+			ft_putchar(s[i], size);
+			i++;
+		}
+}
 
 void	ft_point_parsing_s(va_list args, int *size, t_flags flags)
 {
@@ -24,18 +41,7 @@ void	ft_point_parsing_s(va_list args, int *size, t_flags flags)
 	if (flags.precision == -1 && flags.is_prec == '0')
 		;
 	else if (flags.precision < 0 && flags.is_prec == '1')
-	{
-		ft_print_elem(flags.width > ft_strlen(s) ?
-			flags.width : 0, ft_strlen(s), ' ', size);
-		if (ft_strcmp(s, "(null)") == 0)
-			ft_putstr("(null)", size);
-		else
-			while (s[i])
-			{
-				ft_putchar(s[i], size);
-				i++;
-			}
-	}
+		ppff(s, flags, size);
 	else
 	{
 		ft_print_elem(flags.width, flags.precision > ft_strlen(s) ?
