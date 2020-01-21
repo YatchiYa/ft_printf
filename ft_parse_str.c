@@ -21,7 +21,7 @@ void	ft_zero_parsing_s(va_list args, int *size, t_flags flags)
 	t = va_arg(args, char*);
 	s = (t == NULL) ? ft_strdup("(null)") : ft_strdup(t);
 	i = 0;
-	if (flags.precision != -1)
+	if (flags.is_prec == '1')
 	{
 		ft_print_elem(flags.width, flags.precision - 1, '0', size);
 		while (s[i] && i < flags.precision)

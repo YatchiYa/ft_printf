@@ -42,7 +42,7 @@ def random_arg():
 	format = "%"
 	data = []
 	choices = ["s", "c", "i", "d", "x", "X", "%", "u"]
-
+	# choices = ["x", "X"]
 	width = ""
 	size = ""
 	flags = ""

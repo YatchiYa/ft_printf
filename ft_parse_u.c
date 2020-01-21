@@ -50,7 +50,9 @@ void	uuff(t_flags flags, int *size, int choice)
 {
 	if (flags.is_width == '1' && flags.width < 0)
 		flags.width *= -1;
-	if (flags.precision < 0)
+	if (flags.is_prec == '0' && flags.is_width == '0' && flags.precision == -1)
+		;
+	else if (flags.precision < 0)
 	{
 		if (choice == 1)
 			ft_print_elem(flags.width, 1, '0', size);

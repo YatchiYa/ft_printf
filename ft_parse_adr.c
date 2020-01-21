@@ -37,19 +37,20 @@ void	ft_digits_parsing_adr(char *str, va_list args, int *size, t_flags flags)
 	n = ft_str_length_format(str[0], args);
 	adr = va_arg(args, void*);
 	number = (unsigned long)(adr);
-	if (number == 0 && flags.is_prec == '1')
+	if (flags.is_prec == '0' && flags.is_width == '0')
+		ft_putstr("0x", size);
+	else if (number == 0 && flags.is_prec == '1')
 		ff_xx(size, flags);
 	else
 	{
 		if (flags.is_prec == '1')
-		{
 			ft_print_elem(flags.width, flags.precision > n ?
-			flags.precision : n, ' ', size);
-			ft_print_elem(flags.precision, n, '0', size);
-		}
+			flags.precision + 2 : n, ' ', size);
 		else
 			ft_print_elem(flags.width, n, ' ', size);
 		ft_putstr("0x", size);
+		if (flags.is_prec == '1')
+			ft_print_elem(flags.precision + 2, n, '0', size);
 		ft_putadr(number, size);
 	}
 }

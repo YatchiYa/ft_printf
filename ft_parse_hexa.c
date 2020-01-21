@@ -20,13 +20,10 @@ void	ft_digits_parsing_hexa(char *str, va_list args,
 
 	n = ft_str_length_format(str[0], args);
 	number = va_arg(args, unsigned int);
-	if (number == 0 && flags.precision == 0)
-	{
-		if (flags.is_width == '1' && flags.width < 0)
-			flags.width *= -1;
-		ft_print_elem(flags.precision, 0, '0', size);
-		ft_print_elem(flags.width, flags.precision, ' ', size);
-	}
+	if (flags.is_prec == '0' && flags.is_width == '0')
+		;
+	else if (number == 0 && flags.precision == 0)
+		ft_hexa_ext(flags, size);
 	else
 	{
 		if (flags.is_prec == '1')

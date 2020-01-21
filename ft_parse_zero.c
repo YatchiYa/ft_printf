@@ -36,8 +36,7 @@ void	zzero(t_flags flags, int number, int *size, int n)
 {
 	if (flags.is_prec == '1' && flags.precision >= 0)
 	{
-		number = ft_digits_parsing_id_extends(flags, number, size, n);
-		ft_putnbr(number, size);
+		ft_digits_parsing_id_extends(flags, number, size, n);
 	}
 	else if (flags.is_prec == '1' && flags.precision < 0)
 		ft_zero_parsing_id_extends(flags, number, size, n);

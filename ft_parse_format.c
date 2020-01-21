@@ -75,6 +75,7 @@ void		ft_parse_format(char *str, va_list args, int *p, int *size)
 	else
 	{
 		*p = *p + 1;
+		ft_putchar('%', size);
 		ft_putchar(str[0], size);
 	}
 }

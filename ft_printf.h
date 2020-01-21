@@ -50,7 +50,7 @@ void			ft_minus_parse_id(char *str,
 		va_list args, int *size, t_flags flags);
 void			ft_zero_parsing_id(char *str,
 		va_list args, int *size, t_flags flags);
-int				ft_digits_parsing_id_extends(t_flags flags,
+void			ft_digits_parsing_id_extends(t_flags flags,
 		int number, int *size, int n);
 void			ft_digits_parsing_id_extends_2(t_flags flags, int *size);
 void			ft_minus_parse_id_extends_2(t_flags flags, int *size);
@@ -72,6 +72,7 @@ void			ft_minus_parse_hexa(char *str,
 		va_list args, int *size, t_flags flags);
 void			ft_zero_parsing_hexa(char *str,
 		va_list args, int *size, t_flags flags);
+void			ft_hexa_ext(t_flags flags, int *size);
 
 void			ft_parse_hexa_m(va_list args, int *size);
 void			ft_digits_parsing_hexa_m(char *str,

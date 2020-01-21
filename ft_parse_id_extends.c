@@ -20,7 +20,7 @@ void	ft_digits_parsing_id_extends_2(t_flags flags, int *size)
 	flags.precision != 0 ? ft_putchar('0', size) : 0;
 }
 
-int		ft_digits_parsing_id_extends(t_flags flags, int number,
+void	ft_digits_parsing_id_extends(t_flags flags, int number,
 	int *size, int n)
 {
 	if (number < 0)
@@ -31,14 +31,16 @@ int		ft_digits_parsing_id_extends(t_flags flags, int number,
 		ft_putchar('-', size);
 		number = number * -1;
 		ft_print_elem(flags.precision, n, '0', size);
+		number == INT_MIN ?
+			ft_putnbr_u((unsigned int)number, size) : ft_putnbr(number, size);
 	}
 	else
 	{
 		ft_print_elem(flags.width, flags.precision > n ?
 				flags.precision : n, ' ', size);
 		ft_print_elem(flags.precision, n, '0', size);
+		ft_putnbr(number, size);
 	}
-	return (number);
 }
 
 int		ft_minus_parse_id_extends(t_flags flags, int number, int *size, int n)

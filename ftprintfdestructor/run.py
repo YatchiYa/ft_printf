@@ -23,7 +23,7 @@ def compile_lib():
 def function_content():
     format = ""
     args = []
-    for _ in range(random.randint(0, 10)):
+    for _ in range(random.randint(0, 9)):
         if (random.random() < .6):
             format += inputs.random_string(random.randint(1, 5))
         else:
